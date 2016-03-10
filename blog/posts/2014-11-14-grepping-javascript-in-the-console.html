@@ -1,0 +1,187 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="alternate" type="application/rss+xml" title="RichSoni.com" href="/feed.xml">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+      <title>Rich Soni - Sifting for Javascript, Ruby Style</title>
+    
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+    <meta name="viewport" content="initial-scale=1">
+    <!-- <link rel="stylesheet" href="/assets/bundles/app.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" media="print" href="/assets/bundles/print.css" > -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+    <script src="/bundle.js"></script>
+    <meta property="og:url" content="/" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Sifting for Javascript, Ruby Style" />
+    <meta property="og:image" content="" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        clear: both;
+        font-family: 'Helvetica Neue', HelveticaNeue, Arial, sans-serif;
+        max-width: 960px;
+        margin: auto auto;
+        padding-bottom: 50px;
+        background-color: #232323;
+      }
+      a {
+        color: #428bca;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      @-webkit-keyframes pulse {
+        from {
+            -webkit-transform: scale(1.0);
+          }
+        50% {
+            -webkit-transform: scale(1.1);
+          }
+        to {
+            -webkit-transform: scale(1.0);
+          }
+      }
+
+      .pulse:hover {
+        -webkit-animation-name: pulse;
+        -webkit-animation-duration: .7s;
+        -webkit-animation-iteration-count: 4;
+      }
+
+      .hoverDim a {
+        color: #fff;
+        transition: all ease-in-out .7s;
+      }
+      .hoverDim:hover a {
+        color: #3C3C3C;
+      }
+      .hoverDim a:hover {
+        border-color: white;
+        color: white;
+      }
+
+      .hoverFade i{
+        transition: all ease-in-out .7s;
+      }
+
+      .hoverFade:hover .inactive .fa-inverse{
+        color: #bebebe !important;
+      }
+
+      .hoverFade .inactive .fa-inverse:hover {
+        border-color: #000 !important;
+        color: #000 !important;
+      }
+
+      .hoverFade:hover *:not(.inactive) .fa-stack-2x{
+        color: #bebebe !important;
+      }
+    </style>
+  </head>
+  <body>
+    <p><a class='caption' target="_blank" href='https://www.flickr.com/photos/thomasfisherlibrary/5954552837/in/photolist-a5bD76-8yo9on-8yroiu-cvpQNC-cvpQrA-kUxRG-6oM741-amN8eE-4uZddZ-EHLrQ-5Aphtr-2kdVUj-5keipH-eNhxFg-e9S1dg-2WajBx-e9S1ie-e9S19T-9sau5q-e9S1me-e9RZTV-e9S13z-e9S118-4Vny19-e9XF8U-e9XF6Y-3APYDN-27mzPz-e9RZMH-gsXzfr-2ZkT1k-4uyKqW-2ZkT7k-asosyR-asLrL7-6UU7yG-aeb3H1-9NGqDK-3iaHSo-asoxHR-asoypr-asrcfj-eA2h8-8gHYuy-dCKMCY-dCKRi7-bnsD2k-asrbUW-9NBZKi-djPA8w'>Header Photo credit to Thomas Fischer Rare Book Library</a></p>
+<h1>Panning for Rubies</h1>
+<p>It is difficult to wrangle long hashes, and big objects when debugging.
+Often times, you know the name of the attribute or method, and need to visually scan through a list.
+Ruby has a built in solution to make this process less painful:  The <code>object.methods.grep</code> and <code>hash.keys.grep</code> patterns.
+Here is each one in action:</p>
+<h2>Sifting Arrays</h2>
+<p>Filtering through arrays in Ruby is as easy as using the <code>grep</code> command.</p>
+<pre><code>&gt; hash.methods.length
+<span class="hljs-status"> =&gt;</span> <span class="hljs-number">147</span>
+&gt; hash.methods.grep /to<span class="hljs-number">_</span>/
+<span class="hljs-status">=&gt;</span> [<span class="hljs-symbol">:to_hash</span>, <span class="hljs-symbol">:to_h</span>, <span class="hljs-symbol">:to_a</span>, <span class="hljs-symbol">:to_s</span>, <span class="hljs-symbol">:to_enum</span>]
+</code></pre>
+<p>Instead of reading through a list of 147 entries, the programmer can filter it to what is important.</p>
+<h1>Feeling the Pain</h1>
+<p>A common painpoint faced in javascript is sifting through json keys.
+Sometimes you know the key is something like <code>reference_number</code>, but <code>object.reference_number</code> is undefined.
+In this case, you may need to pop open the object and read through the list.
+If the key was <code>order_reference_number</code> it may be hard to find.
+uspecially in a long list.</p>
+<h1>A Solution</h1>
+<p>Here are two small tools inspired by Ruby's <code>grep</code> to mitigate this pain:</p>
+<pre><code class="language-javascript"><span class="hljs-built_in">Array</span>.prototype.grep = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">regex</span>) </span>{
+  <span class="hljs-keyword">this</span>.filter( <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">elem</span>) </span>{
+    <span class="hljs-keyword">return</span> elem.match(regex)})}
+
+<span class="hljs-built_in">Object</span>.grepKeys = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">object, regex</span>) </span>{
+  <span class="hljs-built_in">Object</span>.keys(object)
+    .grep(regex)
+    .reduce(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">memo, val</span>)</span>{
+      memo[val] = object[val];
+      <span class="hljs-keyword">return</span> memo}, {})}
+</code></pre>
+<p>With these methods at hand, wrangling arrays, and objects becomes much simpler:</p>
+<pre><code class="language-javascript">&gt; array = [<span class="hljs-string">'foo'</span>, <span class="hljs-string">'bar'</span>, <span class="hljs-string">'baz'</span>]
+&gt; array.grep(<span class="hljs-regexp">/b/</span>)
+[<span class="hljs-string">'bar'</span>, <span class="hljs-string">'baz'</span>]
+&gt; array.grep(<span class="hljs-regexp">/ar/</span>)
+[<span class="hljs-string">'bar'</span>]
+
+&gt; obj = [foo: <span class="hljs-number">1</span>, bar: <span class="hljs-number">1</span>, baz: <span class="hljs-number">1</span>]
+&gt; <span class="hljs-built_in">Object</span>.grepKeys(obj, <span class="hljs-regexp">/oo/</span>)
+{foo: <span class="hljs-number">1</span>}
+&gt; <span class="hljs-built_in">Object</span>.grepKeys(obj, <span class="hljs-regexp">/[^b]/</span>)
+{bar: <span class="hljs-number">1</span>, baz: <span class="hljs-number">1</span>}
+</code></pre>
+<p>I dont actually use these functions in my application code, but include them to make debugging less painful.</p>
+<h2>For The Faint Hearted</h2>
+<p>Some are weary of overwriting builtin prototypes.
+This currying solution provided by <a href="http://www.reddit.com/r/javascript/comments/2maw9q/sifting_for_javascript_ruby_style/">Ampersand55 on reddit</a> may suit them better than the above solution.</p>
+<pre><code><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">grep</span><span class="hljs-params">(regex)</span> </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(el)</span> </span>{
+    <span class="hljs-keyword">return</span> regex.test(el)
+  }
+}
+</code></pre>
+<p>Enjoy, and happy coding!!!</p>
+
+  </body> 
+  <script> 
+    var Component = App.pages['blog/posts']
+    React.render(React.createElement(Component, {
+      pathname: window.location.pathname
+    }), document.body)
+  </script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-43693123-1', 'richsoni.com');
+    ga('send', 'pageview');
+  </script>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=190656394463883";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  <script type='text/javascript'>var _merchantSettings=_merchantSettings || [];_merchantSettings.push(['AT', '10lsFa']);(function(){var autolink=document.createElement('script');autolink.type='text/javascript';autolink.async=true; autolink.src= ('https:' == document.location.protocol) ? 'https://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js' : 'http://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(autolink, s);})();</script>
+</html>

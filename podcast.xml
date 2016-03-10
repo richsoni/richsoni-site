@@ -1,0 +1,60 @@
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+  <channel>
+    <title>
+      Rich Soni Podcast
+    </title>
+    <description>
+      Rich Soni talking with whoever he feels like about whatever he feels like.
+    </description>
+    <link>http://richsoni.com</link>
+    <language>en-us</language>
+    <copyright>Copyright 2016</copyright>
+    <lastBuildDate>Fri, 02 Feb 2016 16:09:00 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 02 Feb 2016 16:09:00 -0500</lastBuildDate>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    <webMaster>rich@richsoni.com</webMaster>
+    <ttl>60</ttl>
+    <itunes:author>rich@richsoni</itunes:author>
+    <itunes:subtitle>
+      Rich Soni talking with whoever he feels like about whatever he feels like.
+    </itunes:subtitle>
+    <itunes:summary>
+      Rich Soni talking with whoever he feels like about whatever he feels like.
+    </itunes:summary>
+    <itunes:owner>
+      <itunes:name>Rich Soni</itunes:name>
+      <itunes:email>rich@richsoni.com</itunes:email>
+    </itunes:owner>
+    <itunes:explicit>No</itunes:explicit>
+    <itunes:image href="http://www.richsoni.com/images/stv1bgt.png"/>
+    <itunes:category text="Technology">
+      <itunes:category text="Podcasting"/>
+    </itunes:category>
+    <item>
+      <title>
+        Eros Marcello
+      </title>
+      <guid>
+        http://media.libsyn.com/media/podcast411/411_060708.mp3
+      </guid>
+      <description>
+        Welcome to the show it is July 8th and this is our 155th show. Today will be an interview with Senator Ted Stevens of Alaska talking about Net Neutrality
+      </description>
+      <enclosure url="http://media.libsyn.com/media/podcast411/411_060708.mp3" length="10237349" type="audio/mpeg"/>
+      <category>Podcasts</category>
+      <pubDate>Fri, 07 Jul 2006 00:15:00 -0500</pubDate>
+      <itunes:author>Rob @ podCast411</itunes:author>
+      <itunes:explicit>No</itunes:explicit>
+      <itunes:subtitle>
+        Welcome to the show it is July 8th and this is our 155th show. Today will be an interview with Senator Ted Stevens of Alaska talking about Net Neutrality
+      </itunes:subtitle>
+      <itunes:summary>
+        Welcome to the show it is July 8th and this is our 155th show. Today will be an interview with Senator Ted Stevens of Alaska talking about Net Neutrality
+      </itunes:summary>
+      <itunes:duration>00:21:18</itunes:duration>
+      <itunes:keywords>
+        podCast411, podcast, podcasting, podcaster, Interviews, Senator Stevens, Net Neutrality
+      </itunes:keywords>
+    </item>
+  </channel>
+</rss>

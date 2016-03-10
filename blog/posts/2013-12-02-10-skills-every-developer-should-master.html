@@ -1,0 +1,246 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="alternate" type="application/rss+xml" title="RichSoni.com" href="/feed.xml">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+      <title>Rich Soni - 10 Skills Every Developer Should Master</title>
+    
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+    <meta name="viewport" content="initial-scale=1">
+    <!-- <link rel="stylesheet" href="/assets/bundles/app.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" media="print" href="/assets/bundles/print.css" > -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+    <script src="/bundle.js"></script>
+    <meta property="og:url" content="/" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="10 Skills Every Developer Should Master" />
+    <meta property="og:image" content="" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        clear: both;
+        font-family: 'Helvetica Neue', HelveticaNeue, Arial, sans-serif;
+        max-width: 960px;
+        margin: auto auto;
+        padding-bottom: 50px;
+        background-color: #232323;
+      }
+      a {
+        color: #428bca;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      @-webkit-keyframes pulse {
+        from {
+            -webkit-transform: scale(1.0);
+          }
+        50% {
+            -webkit-transform: scale(1.1);
+          }
+        to {
+            -webkit-transform: scale(1.0);
+          }
+      }
+
+      .pulse:hover {
+        -webkit-animation-name: pulse;
+        -webkit-animation-duration: .7s;
+        -webkit-animation-iteration-count: 4;
+      }
+
+      .hoverDim a {
+        color: #fff;
+        transition: all ease-in-out .7s;
+      }
+      .hoverDim:hover a {
+        color: #3C3C3C;
+      }
+      .hoverDim a:hover {
+        border-color: white;
+        color: white;
+      }
+
+      .hoverFade i{
+        transition: all ease-in-out .7s;
+      }
+
+      .hoverFade:hover .inactive .fa-inverse{
+        color: #bebebe !important;
+      }
+
+      .hoverFade .inactive .fa-inverse:hover {
+        border-color: #000 !important;
+        color: #000 !important;
+      }
+
+      .hoverFade:hover *:not(.inactive) .fa-stack-2x{
+        color: #bebebe !important;
+      }
+    </style>
+  </head>
+  <body>
+    <p><em>This article has be revised!!! <a href="2014-03-17-10-skills-every-developer-should-master-revisited.md">The updated version can be found here</a></em></p>
+<hr>
+<p>There are some things you just have to know.<br>
+These are the things all developers need to know.<br>
+With this toolset mastered, you should be in good shape to gracefully navigate through any typical development environment.</p>
+<ol>
+<li>Vi</li>
+<li>Regex</li>
+<li>GNU Tools</li>
+<li>Bash</li>
+<li>Javascript</li>
+<li>Emacs</li>
+<li>SQL</li>
+<li>Markdown</li>
+<li>Tmux</li>
+<li>R</li>
+</ol>
+<p><strong>Bonus</strong> Git</p>
+<p>#Vi</p>
+<p><strong>Fact</strong> Any reasonable developer should know the basics of vi.</p>
+<p><strong>Opinion</strong> Vi is better than emacs.</p>
+<p>Just to get that straightened out.  This article is not about vi vs emacs (they are both on the list!).</p>
+<p>Vi is listed first because it is the standard.  Log into any *nix server and you will have vi.<br>
+Every developer should be able to login to a fresh system, and edit files.<br>
+Lets face it, even emacs users can agree that nano is for n00bs.<br>
+After all, its called visudo, not nanosudo.</p>
+<p>If you are not a vimmer, I recommend you learn the basics.  This means just editing a file, and save/quitting.<br>
+If you prefer a GUI editor, or emacs, thats cool for normal usage, but in emergencies vi should available in your toolbelt.</p>
+<p><strong>Recommended Reading</strong></p>
+<ol>
+<li>Open your terminal and complete the first quarter of <code>$ vitutor</code></li>
+<li>Use vi to edit config files in the terminal to get used to the commands.</li>
+</ol>
+<p>#Regex</p>
+<p>In addition to vi, regular expressions are universally available.<br>
+For many developers, their programming career can be broken into <em>before-regex</em> and <em>after-regex</em>.<br>
+That is because your workflow will vastly increase once you can use regexes in your find and replace operations.</p>
+<p>This will be applicable in your code as well.  You cannot master half of the tools listed in this article without regex expertise, so if you dont know how to write regexes stop and learn right now.</p>
+<p><strong>Recommended Reading</strong></p>
+<ol>
+<li><a href="%22http://www.amazon.com/gp/product/1449319432/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=1449319432&amp;linkCode=as2&amp;tag=richsonicom-20%22">Regular Expressions Cookbook</a> is how I started learning regex, but it is a bit slow for beginners.</li>
+<li><a href="http://www.amazon.com/gp/product/097873923X/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=097873923X&amp;linkCode=as2&amp;tag=richsonicom-20">Textmate: Power Editing for the Mac</a> was the book that actually taught me regex.  Specifically the search chapter.</li>
+</ol>
+<p>#GNU Tools</p>
+<p>Just like regex, GNU tools will change your life.<br>
+They liberate you from language specific IDE environments, and allow you to get good at something universal.<br>
+Even experts continue to marvel at the power bestowed upon a properly crafted chain of GNU Commands.</p>
+<p><strong>Recommended Reading</strong></p>
+<ol>
+<li>All developers must own <a href="http://www.amazon.com/gp/product/0596003307/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0596003307&amp;linkCode=as2&amp;tag=richsonicom-20">Unix Power Tools</a></li>
+<li>Taco Bell Coding</li>
+<li>Read man pages, you will be surprised at the power some commands have (e.g. man find; man curl; man grep)</li>
+</ol>
+<p>#Bash</p>
+<p>Unlike the formerly mentioned tools shell scripting is something gradually pays off.<br>
+For me it started with writing small scripts to automate tmux, and make my work easier.<br>
+I mastered bash when I wrote my own customized bash prompt while on a trip in Ireland.</p>
+<p>There are many alternatives to bash out there, and I tried many of them extensively, but have to say that it is not worth the headache.</p>
+<p>Bash has many features that other shells dont, and like vi, bash is usually the standard.<br>
+It is nice to not have to install Zshell.  Trust me on this.  With my current set up, all I have to do is wget my dotfiles, and run the install script.<br>
+With a clean up script, you can even do this on a buddy's computer without zapping out his or her files.</p>
+<p>As far as features go, <code>$ set</code> was the command that made me leave zshell.<br>
+My prompt port is also way faster in bash.</p>
+<p><strong>Recommended Reading</strong></p>
+<ol>
+<li>The <a href="http://www.amazon.com/gp/product/0596526784/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0596526784&amp;linkCode=as2&amp;tag=richsonicom-20">Bash Cookbook</a> really sharpened my skills in a logical order.</li>
+</ol>
+<p>#Javascript</p>
+<p>Javascript is everywhere.  That is why every programmer should master it.  It is like the PERL of the modern time.  Using a friends Windows computer, but you need to do a little rat-tat-tat-tat in a console?  That is where Javascript shines.<br>
+In addition to its portability, using javascript to do a quick page scrape can save you tons of time.</p>
+<p>I would like to add that you should be using jQuery because it provides a higher level syntax, which is better for rat-tat-tat-tatting.</p>
+<p><strong>Recommended Reading</strong></p>
+<ol>
+<li>Javascript, the good parts</li>
+<li>Functional Javascript</li>
+</ol>
+<p>#Emacs</p>
+<p>Emacs is the other of the big two text editors, but holds another special value:  Command line shortcuts, are defaulted to emacs.<br>
+Although you can change your inputrc file to use vim mode, it is a little bit janky.</p>
+<p>I ended up customizing myself a hybrid of both.  In short, all master developers need to know both vi and emacs, no exceptions.</p>
+<p>Vimmers, if you want the respect of emacs users, know how to use their editor when you are pairring.<br>
+The same goes for emacs users.</p>
+<p><strong>Recommended Reading</strong></p>
+<p>#SQL</p>
+<p>SQL is one common denominator that spreads across almost all application domains.<br>
+Master SQL, and master it early.  It will pay off in the long run, I promise.<br>
+I noticed that many senior level developers can join a team, and scale up their ability to contribute, and debug an existing project by poking around in the database.</p>
+<p>Most databases use SQL, so if you learn one you will be able to ramp up quickly in another.</p>
+<p><strong>Recommended Reading</strong></p>
+<ol>
+<li>unfortunately none.  Learning SQL is something I learned in a college class, and I am very happy I did.  Fortunately the basics are easy to pick up. Just ask a colleage to teach you, and practice a lot.</li>
+</ol>
+<p>#Markdown</p>
+<p>Markdown is the newest tool on my own belt, but one of the most useful.<br>
+It is so awesome that once you learn it, you will begin to insist that your workplace integrates it into its project management software.<br>
+I write my meeting notes, readmes, code documentation, and even my blog posts in markdown.</p>
+<p>It is the solution to the plaintext, no syntax highlight problem.<br>
+The only problem is there is no quick way to just pick up markdown.</p>
+<p>I suggest you start with headings and lists, and then slowly add the features you need.</p>
+<p><strong>Recommended Reading</strong></p>
+<p>#Tmux</p>
+<p>For some reason Tmux is a hard sell, but it is so awesome.<br>
+I dont use the terminal without it.<br>
+I will just list why I like it, and how to learn it.<br>
+Understand that it is on this list, and when you learn it, you will be so surprised that no one wants to learn it.</p>
+<p>Tmux lets you:  save ssh sessions, remote pair via ssh, split panes, use vimux, organize and automate you development environment, rapidly switch context.</p>
+<p><strong>Recommended Reading</strong></p>
+<p>#R</p>
+<p>R is another tool I learned in college.  In my opinion, it has the steepest learning curve out of all the tools in this article.<br>
+However, it saves you the headache of using Excel.</p>
+<p>I mostly use it to dynamically generate graphs.  I use this to monitor personal stats (e.g. progress and error of transitioning from qwerty to dvorak)</p>
+<p><strong>Recommended Reading</strong></p>
+<p>#Git</p>
+<p>Lastly I would recommend learning git, but I would not go as far as saying you have to learn it.<br>
+I have used most of the popular SVN systems, and I find git to be the most complete, and simple once understood.<br>
+<strong>Recommended Reading</strong></p>
+
+  </body> 
+  <script> 
+    var Component = App.pages['blog/posts']
+    React.render(React.createElement(Component, {
+      pathname: window.location.pathname
+    }), document.body)
+  </script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-43693123-1', 'richsoni.com');
+    ga('send', 'pageview');
+  </script>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=190656394463883";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  <script type='text/javascript'>var _merchantSettings=_merchantSettings || [];_merchantSettings.push(['AT', '10lsFa']);(function(){var autolink=document.createElement('script');autolink.type='text/javascript';autolink.async=true; autolink.src= ('https:' == document.location.protocol) ? 'https://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js' : 'http://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(autolink, s);})();</script>
+</html>

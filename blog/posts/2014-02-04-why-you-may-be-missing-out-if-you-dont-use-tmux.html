@@ -1,0 +1,270 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="alternate" type="application/rss+xml" title="RichSoni.com" href="/feed.xml">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+      <title>Rich Soni - Why You May Be Missing Out If You Dont Use TMUX</title>
+    
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+    <meta name="viewport" content="initial-scale=1">
+    <!-- <link rel="stylesheet" href="/assets/bundles/app.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" media="print" href="/assets/bundles/print.css" > -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+    <script src="/bundle.js"></script>
+    <meta property="og:url" content="/" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Why You May Be Missing Out If You Dont Use TMUX" />
+    <meta property="og:image" content="" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/images/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        clear: both;
+        font-family: 'Helvetica Neue', HelveticaNeue, Arial, sans-serif;
+        max-width: 960px;
+        margin: auto auto;
+        padding-bottom: 50px;
+        background-color: #232323;
+      }
+      a {
+        color: #428bca;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      @-webkit-keyframes pulse {
+        from {
+            -webkit-transform: scale(1.0);
+          }
+        50% {
+            -webkit-transform: scale(1.1);
+          }
+        to {
+            -webkit-transform: scale(1.0);
+          }
+      }
+
+      .pulse:hover {
+        -webkit-animation-name: pulse;
+        -webkit-animation-duration: .7s;
+        -webkit-animation-iteration-count: 4;
+      }
+
+      .hoverDim a {
+        color: #fff;
+        transition: all ease-in-out .7s;
+      }
+      .hoverDim:hover a {
+        color: #3C3C3C;
+      }
+      .hoverDim a:hover {
+        border-color: white;
+        color: white;
+      }
+
+      .hoverFade i{
+        transition: all ease-in-out .7s;
+      }
+
+      .hoverFade:hover .inactive .fa-inverse{
+        color: #bebebe !important;
+      }
+
+      .hoverFade .inactive .fa-inverse:hover {
+        border-color: #000 !important;
+        color: #000 !important;
+      }
+
+      .hoverFade:hover *:not(.inactive) .fa-stack-2x{
+        color: #bebebe !important;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Tmux is one of the <a href="/10-skills-every-developer-should-master/">10 skills every developer should master</a>.
+It takes <a href="https://www.bitcast.io/b/tmux-tunes-week-1">one week</a> to get started, and saves hours of work and frustration.</p>
+<p>Tmux is a modern incarnation of the GNU Screen program.
+Between the two, tmux has a more active group of developers.
+As such, most open tmux bugs are usually fixed faster.
+Greater development activity, and added features are why I use tmux over Screen.
+However, this article mostly showcases basic features which both technologies include.</p>
+<p>Feel free to give either program a try.
+Both improve a workflow in essentially the same way.
+It's easy to switch between using either program because they are very similar.</p>
+<h1>Why use tmux?</h1>
+<p>Answer the following questions to evaluate if tmux can benefit you:</p>
+<div height='1px'></div>
+<ul style='list-style:none; border-left: 0px'>
+  <li><label style='font-weight:normal'><input type='checkbox'/> I often ssh into another box from the terminal</label></li>
+  <li><label style='font-weight:normal'><input type='checkbox'/> I have more than three terminal tabs open on a regular basis</label></li>
+  <li><label style='font-weight:normal'><input type='checkbox'/> I like to look at two terminal windows side by side</label></li>
+  <li><label style='font-weight:normal'><input type='checkbox'/> I use ( or want to learn ) vi, vim, gvim, or MacVim</label></li>
+  <li><label style='font-weight:normal'><input type='checkbox'/> My project workflows are complicated to set up, and should be automated</label></li>
+</ul>
+<p>If you answered <strong>yes to any</strong> of those questions, then tmux will be useful to you.</p>
+<ol>
+<li>It can improve the stability, and increase the execution speed of workflows.</li>
+<li>It enables visualization of problems in a new way.</li>
+<li>It is easy to install, and works on most *nix platforms.</li>
+</ol>
+<h1>How does it work?</h1>
+<p>Tmux stands for terminal multiplexer.</p>
+<blockquote>
+<p>tmux = <em>t<span style='color:#7f7f7f'>erminal</span> mu<span style='color:#7f7f7f'>ltiple</span>x<span style='color:#7f7f7f'>er</span></em></p>
+</blockquote>
+<p>A terminal multiplexer is a program that can load many terminal windows within one.
+Don't let this complex verbiage discourage you!!!
+Using tmux is not very complicated, I promise.</p>
+<p>The tmux man page (<code>$ man tmux</code>) explains the features that tmux offers.</p>
+<blockquote>
+<p><span style='color:#7f7f7f'>(tmux) enables a</span> number of terminals <span style='color:#7f7f7f'>to be created,
+accessed, and controlled from a</span> single screen.  <span style='color:#7f7f7f'>tmux may be detached from a
+screen and continue </span> running in the background, <span style='color:#7f7f7f'>then later </span>reattached.</p>
+</blockquote>
+<p>Tmux is a service that runs in the background.
+When attached to a tmux session, it enables interaction with the windows it controls.
+When the attached shell exits; tmux <em>detaches</em>, but remains running in the background.
+As such, a separate shell can <em>reattach</em> back into the tmux session.
+The session will continue in tmux with or without attached users.
+Any running programs in the session operate as if they were active the whole time.</p>
+<p>Tmux can manage multiple sessions at the same time.
+Within each session, any number of windows can be created.
+Windows can also be split into both vertical and horizontal panes.
+Tmux can be controlled by scripts, and automate repetitive workflow tasks.</p>
+<p><strong>Go Learn It</strong>:
+<a href="#WhatToDo">Skip down to a list of next steps</a> if you are sold on giving tmux a try.</p>
+<h1>Use Cases</h1>
+<p>Here are a few example use cases for tmux.
+They highlight some ways that tmux can be used to improve day to day workflows.
+Please share your own use cases in the <a href="#Comments">comments</a> section.</p>
+<h2>Debugging</h2>
+<p>A certain workflow is more efficient with two windows aligned next to each other e.g. code and server, code and console ect.</p>
+<h3>Without Tmux</h3>
+<ol>
+<li>Manually arrange windows next to each other.</li>
+<li>During the day resize them, and continually realign them.</li>
+</ol>
+<h3>With Tmux</h3>
+<ol>
+<li>Split the current tmux window into two panes</li>
+<li>resize the terminal window, and tmux will proportinally resize the panes</li>
+</ol>
+<p><img class="img-responsive media-object" src='/blog/posts/images/tmux_split.gif' alt="miniature-article"></p>
+<h2>SSH</h2>
+<p>An external box needs to run a long script ( like an install script )</p>
+<h3>Without Tmux</h3>
+<ol>
+<li>SSH into the machine and start the script</li>
+<li>Keep the session open because ending it will close all processes, and the script will fail.</li>
+</ol>
+<h3>With Tmux</h3>
+<ol>
+<li>SSH into the machine and start tmux</li>
+<li>Start the script and feel free to disconnect ( on purpose, or accidentally)</li>
+<li>Later on, ssh back in and attach to the tmux session to check on the progress</li>
+</ol>
+<p><img class="img-responsive media-object" src='/blog/posts/images/tmux_ssh.gif' alt="miniature-article"></p>
+<h2>Accidentally Closing A Bunch Of Tabs</h2>
+<p>There are a bunch of terminal tabs and windows open.
+At some point another app needs to be closed.
+However, the terminal application gets closed by accident.
+Now, the lost terminal windows need to be restored.</p>
+<h3>Without Tmux</h3>
+<ol>
+<li>Individually open each tab again, and be extra careful next time</li>
+</ol>
+<h3>With Tmux</h3>
+<ol>
+<li>Open a new terminal window and attach to the tmux session, everything is still there.</li>
+</ol>
+<p><img class="img-responsive media-object" src='/blog/posts/images/tmux_accident.gif' alt="miniature-article"></p>
+<h2>Morning set up</h2>
+<p>On a certain project, several tasks need to be completed before work can begin e.g.</p>
+<pre><code>$ cd project
+$ git pull
+$ <span class="hljs-operator"><span class="hljs-keyword">start</span> <span class="hljs-keyword">server</span>
+[<span class="hljs-keyword">Open</span> a <span class="hljs-keyword">new</span> tab]
+$ cd <span class="hljs-keyword">project</span>
+$ <span class="hljs-keyword">start</span> db
+[<span class="hljs-keyword">Open</span> a <span class="hljs-keyword">new</span> tab]
+$ cd <span class="hljs-keyword">project</span>
+$ <span class="hljs-keyword">start</span> console
+[<span class="hljs-keyword">Open</span> a <span class="hljs-keyword">new</span> tab]
+$ cd <span class="hljs-keyword">project</span>
+$ vim .
+</span></code></pre>
+<h3>Without Tmux</h3>
+<ol>
+<li>Individually open each tab, and run each command in sequence</li>
+</ol>
+<h3>With Tmux</h3>
+<ol>
+<li>Write a tmux script that opens all the tabs, and executes commands in sequence</li>
+<li>Meanwhile, go and talk with a buddy about how awesome Bob Dylan is.</li>
+</ol>
+<p><img class="img-responsive media-object" src='/blog/posts/images/tmux_scripted.gif' alt="miniature-article"></p>
+<h1>What to do</h1>
+<p>This article intentionally does not show how to use tmux.
+That topic is a bit too long and confusing to condense into a single post.
+As such, here is a high level guide of the next steps that can be taken to learn tmux.</p>
+<p><strong>get tmux</strong> before doing anything else.
+Install it with a package manager: <code>sudo [yum|apt-get|brew] install tmux]</code></p>
+<p>Then choose one or all of these ways to learn:</p>
+<ol>
+<li><a href="https://www.bitcast.io/b/tmux-tunes-week-1">My videos</a> which will let you start using tmux immediately, and gradually show more features as time goes on.</li>
+<li>Purchase <a href="http://www.amazon.com/gp/product/B00A4I3ZVY/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00A4I3ZVY&amp;linkCode=as2&amp;tag=richsonicom-20">this book</a> that takes about two weeks to read / get up to speed ( this is how I learned tmux )</li>
+<li>Reading <code>$ man tmux</code> will get experienced unix users up to speed for free</li>
+</ol>
+<h1>Further Reading</h1>
+<ol>
+<li><a href="http://undeadly.org/cgi?action=article&amp;sid=20090712190402">Interview with the author of tmux</a></li>
+<li>Movies:  <a href="https://www.bitcast.io/b/tmux-tunes-week-1">tmux Tunes by codriffs</a></li>
+<li>Book:  <a href="http://www.amazon.com/gp/product/B00A4I3ZVY/ref=as_li_ss_tl?ie=UTF8&amp;camp=1789&amp;creative=390957&amp;creativeASIN=B00A4I3ZVY&amp;linkCode=as2&amp;tag=richsonicom-20">tmux: Productive Mouse-Free Development</a></li>
+</ol>
+
+  </body> 
+  <script> 
+    var Component = App.pages['blog/posts']
+    React.render(React.createElement(Component, {
+      pathname: window.location.pathname
+    }), document.body)
+  </script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-43693123-1', 'richsoni.com');
+    ga('send', 'pageview');
+  </script>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=190656394463883";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  <script type='text/javascript'>var _merchantSettings=_merchantSettings || [];_merchantSettings.push(['AT', '10lsFa']);(function(){var autolink=document.createElement('script');autolink.type='text/javascript';autolink.async=true; autolink.src= ('https:' == document.location.protocol) ? 'https://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js' : 'http://autolinkmaker.itunes.apple.com/js/itunes_autolinkmaker.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(autolink, s);})();</script>
+</html>
