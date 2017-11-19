@@ -2,57 +2,40 @@
 startTime: 5:00 PM
 endTime: 8:00 PM
 setlist:
+  - babe-it-aint-no-lie
+  - between-these-canals
+  - workingmans-blues
+  - get-off-of-my-cloud
+  - fly-away
+  - need-for-love
+  - it-takes-a-lot-to-laugh-it-takes-a-train-to-cry
+  - purple-gun
+  - wander-with-me
+  - together
+  - friend-of-the-devil
+  - sweet-grass-memory
+  - song-of-broken-justice
+  - pine-of-the-pub
+  - ghosts-in-the-wire
+  - down-in-the-bottom
+  - two-more-things
+  - benny-bet-his-wife-in-a-game-of-texas-stud
+  - sugaree
+  - ballad-of-the-condor
+  - amelia
+  - blues-in-a-bottle
+  - hey-baby-doll
+  - black-and-blues
+  - just-like-tom-thumbs-blues
+  - ordinary-man-and-the-angel
+  - wayward-sister
+  - tower-of-cain
+  - leeds-devil
+  - spookytown
+  - halloween-medley
+  - please-come-home
+  - the-weight
+  - little-seaside-home
+  - farmhouse-no-woman-no-cry
+  - black-velvet-band
 ---
-- 14 covers
-- 28 originals
-
-- benny-bet-his-wife-in-a-game-of-texas-stud
-- two-more-things
-- song-of-broken-justice
-- ballad-of-the-condor
-- workingmans-blues
-- walk-and-wheeze
-- molly-do-it-look-like-i-care
-
-- pine-of-the-pub
-- between-these-canals
-
-- amelia
-- black-and-blues
-- need-for-love
-- ordinary-man-and-the-angel
-- singing-in-the-wind
-- purple-gun
-
-- black-rose
-- wayward-sister
-- leeds-devil
-- tower-of-cain
-- spookytown
-
-- fly-away
-- sweet-grass-memory
-- little-seaside-home
-
-- ghosts-in-the-wire
-
-- hey-baby-doll
-- please-come-home
-- wander-with-me
-- together
-
-- black-velvet-band
-- down-in-the-bottom
-- rye-whiskey
-- the-wild-rover
-- whiskey-in-the-jar
-- babe-it-aint-no-lie
-- blues-in-a-bottle
-
-- casey-jones
-- friend-of-the-devil
-- get-off-of-my-cloud
-- farmhouse-no-woman-no-cry
-- it-takes-a-lot-to-laugh-it-takes-a-train-to-cry
-- sugaree
-- the-weight

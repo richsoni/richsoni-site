@@ -14,4 +14,9 @@ tracklist:
   - the-wild-rover
   - black-velvet-band
   - pine-of-the-pub
+
+links:
+  bandflare: http://www.bandflare.com/reh6n0c
+  bandcamp: http://richsoni.bandcamp.com/album/the-angels-share
 ---
+

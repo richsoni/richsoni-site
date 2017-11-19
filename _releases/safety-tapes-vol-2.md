@@ -16,4 +16,12 @@ tracklist:
   - it-is-what-it-is
   - four-and-twenty-elders
   - jumping-freight-trains
+
+links:
+ bandflare: http://www.bandflare.com/re131ts
+ bandcamp: http://richsoni.bandcamp.com/album/safety-tapes-vol-2-since-the-last-blood-moon
+ spotify: https://open.spotify.com/album/4J9Qkzb8rKklZdKrOqcUUj
+ itunes: https://itunes.apple.com/us/album/1095558201
+ amazon: https://www.amazon.com/gp/product/B01DAKV13G/ref=dm_ws_sp_ps_dp
+ googlePlay: https://play.google.com/store/music/album/Rich_Soni_Safety_Tapes_Vol_2_Since_the_Last_Blood?id=Bytz22fstl7pchcw25zkoe4hsv4
 ---

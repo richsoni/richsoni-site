@@ -1,0 +1,57 @@
+.clickableArt {
+  background-size: cover;
+}
+
+.halfSection {
+  background-position: bottom center;
+  background-color: #12002F;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.rounded {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 1em;
+  margin-left: 1em
+}
+
+.whiteLink {
+  color: #fff;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  max-width: 1200px;
+  overflow: hidden;
+}
+
+.leftSection {
+  align-self: flex-start;
+  padding: 1em;
+}
+
+.rightSection {
+  align-self: flex-end;
+  width: 372px;
+  text-align: center;
+}
+
+.header {
+  background-color:#ffffff;
+  padding:2;
+  text-align: center;
+  color: #000000;
+}
+
+.bottomLinks {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+}

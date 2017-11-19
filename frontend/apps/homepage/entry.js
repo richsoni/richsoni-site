@@ -8,7 +8,7 @@ const Radium          = require("radium")
 const Style = Radium.Style;
 const MailingListHalf = require("./mailinglist")
 const EventsHalf = require("./EventsHalf")
-
+import NewLatestRelease from './newLatestRelease';
 
 class _RootComponent extends React.Component{
   render() {
@@ -35,6 +35,7 @@ class _RootComponent extends React.Component{
         backgroundPosition: 'center'}}>
         <MailingListHalf />
       </Half>
+      <NewLatestRelease />
       <Half style={{backgroundImage: 'url(/images/hbr.png)', backgroundPosition: 'bottom center', backgroundColor: '#12002F', backgroundRepeat: 'no-repeat', backgroundSize:'cover'}}><LatestRelease /></Half>
       <Footer />
     </div>

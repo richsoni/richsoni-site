@@ -7,4 +7,10 @@ tracklist:
   - wander-with-me
   - fly-away
   - amelia
+
+links:
+  bandcamp: http://google.com
+  spotify: http://google.com
+  itunes: http://google.com
+  amazon: http://google.com
 ---

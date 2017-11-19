@@ -1,54 +1,39 @@
 ---
 startTime: 3:00 PM
 endTime: 6:00 PM
+setlist:
+  - babe-it-aint-no-lie
+  - pine-of-the-pub
+  - black-and-blues
+  - get-off-of-my-cloud
+  - please-come-home
+  - sweet-grass-memory
+  - sugaree
+  - ordinary-man-and-the-angel
+  - workingmans-blues
+  - blues-in-a-bottle
+  - ghosts-in-the-wire
+  - song-of-broken-justice
+  - friend-of-the-devil
+  - wayward-sister
+  - greatest-gift
+  - just-like-tom-thumbs-blues
+  - benny-bet-his-wife-in-a-game-of-texas-stud
+  - down-in-the-bottom
+  - whiskey-in-the-jar
+  - two-more-things
+  - casey-jones
+  - black-rose
+  - purple-gun
+  - black-velvet-band
+  - amelia
+  - ballad-of-the-condor
+  - the-wild-rover
+  - need-for-love
+  - stormy-window
+  - the-weight
+  - wander-with-me
+  - together
+  - saints-dont-wander-far-from-sin
+  - between-these-canals
 ---
-
-- benny-bet-his-wife-in-a-game-of-texas-stud
-- two-more-things
-- song-of-broken-justice
-- ballad-of-the-condor
-- workingmans-blues
-- walk-and-wheeze
-- molly-do-it-look-like-i-care
-
-- pine-of-the-pub
-- between-these-canals
-
-- amelia
-- black-and-blues
-- need-for-love
-- ordinary-man-and-the-angel
-- shake-shake-honey
-- purple-gun
-- devil-and-her-mother
-- planes-trains-autoresponders
-
-- black-rose
-- wayward-sister
-- leeds-devil
-- tower-of-cain
-
-- saints-dont-wander-far-from-sin
-- sweet-grass-memory
-
-- greatest-gift
-- stormy-window
-- please-come-home
-- wander-with-me
-- together
-
-- black-velvet-band
-- down-in-the-bottom
-- peg-and-awl
-- the-wild-rover
-- whiskey-in-the-jar
-- babe-it-aint-no-lie
-- blues-in-a-bottle
-
-- casey-jones
-- friend-of-the-devil
-- get-off-of-my-cloud
-- farmhouse-no-woman-no-cry
-- just-like-tom-thumbs-blues
-- sugaree
-- the-weight

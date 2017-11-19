@@ -1,7 +1,7 @@
 const React = require("react")
 const Radium          = require("radium")
 const assign = require("object-assign")
-let style = {
+let defaultStyle = {
   width: '100%',
   minHeight: '50vh',
   display: 'flex',
@@ -16,17 +16,24 @@ let style = {
 
 class Half extends React.Component{
   render(){
-    return <section style={assign({}, style, this.props.style)}>
-      {this.props.children}
+    const {
+      classNames,
+      children,
+      style,
+    } = this.props
+    return <section className={classNames.section} style={assign({}, defaultStyle, style)}>
+      {children}
     </section>
   }
 }
 
 Half.propTypes = {
   style: React.PropTypes.object,
+  classNames: React.PropTypes.object,
 }
 Half.defaultProps = {
   style: {},
+  classNames: {},
 }
 
 module.exports = Radium(Half)
