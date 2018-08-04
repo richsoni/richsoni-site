@@ -1,0 +1,12 @@
+.container {
+  position: fixed;
+  display: block;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  height: 2.5em;
+  cursor: pointer;
+  text-decoration: none;
+  text-shadow: none;
+  background-image: none;
+}
