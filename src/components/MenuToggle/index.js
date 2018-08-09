@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './index.module.css';
 import theme from '../../utils/themeVars';
+import {pulse} from '../../utils/pulse.module.css';
 
 export default class MenuToggle extends React.Component {
   static propTypes = {
@@ -22,7 +23,7 @@ export default class MenuToggle extends React.Component {
       onClick={onToggle}
     >
       <span
-        className="fa-stack fa-lg pulse"
+        className={"fa-stack fa-lg "+pulse}
       >
         <i style={{color: 'black'}} className="fa fa-circle fa-stack-2x"></i>
         <i
