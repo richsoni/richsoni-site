@@ -2,7 +2,7 @@ import React from "react";
 import Link from 'gatsby-link';
 
 export default ({data}) => {
-  console.log(data);
+  console.log(data.allMarkdownRemark.edges[0].node.frontmatter);
 return (
     <div>
       <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
@@ -26,7 +26,10 @@ return (
 
 export const query = graphql`
   query IndexQuery {
-    allMarkdownRemark {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [fields___date] }
+      limit: 1000
+    ) {
       totalCount
       edges {
         node {
@@ -37,6 +40,7 @@ export const query = graphql`
           }
           fields {
             slug
+            date
           }
           excerpt
         }

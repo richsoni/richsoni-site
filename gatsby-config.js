@@ -14,4 +14,22 @@ module.exports = {
   },
   'gatsby-plugin-react-helmet',
   'gatsby-transformer-remark',
+  {
+    resolve: 'gatsby-plugin-pathdata',
+    options: {
+      matchNodeType: 'MarkdownRemark',
+      extract: [
+        {
+          name: 'path',
+          selector: /.+\/(\d+-\d+-\d+-[\w-]+)\.md$/,
+          replacer: '/$1/'
+        },
+        {
+          name: 'date',
+          selector: /.+\/(\d+-\d+-\d+)-[\w-]+\.md$/,
+          replacer: '$1'
+        }
+      ]
+    }
+  }
 ]};
