@@ -1,7 +1,7 @@
 .container {
   position: fixed;
   display: block;
-  top: 0;
+  top: 7px;
   right: 0;
   z-index: 5;
   height: 2.5em;

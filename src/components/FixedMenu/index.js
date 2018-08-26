@@ -24,21 +24,11 @@ class SocialButtons extends React.Component {
 }
 
 export default class FixedMenu extends React.Component {
-  constructor(attrs){
-    super()
-    this.state = {
-      showMenu: false
-    }
-  }
-
   render() {
-    const {
-      showMenu
-    } = this.state;
+    const { showNavMenu } = this.props
     return (
       <header className={styles.header}>
         <Logo style={{position: 'fixed'}} />
-        <MenuToggle showMenu={showMenu} onToggle={this.toggleMenu.bind(this)} />
         <div style={{ }}>
           <nav
             style={{
@@ -49,7 +39,7 @@ export default class FixedMenu extends React.Component {
               justifyContent: 'flex-end',
               top: 0,
               height: '2.8em',
-              right: this.state.showMenu ? 80 : -10000,
+              right: showNavMenu ? 80 : -10000,
               alignItems: 'center',
               transitionProperty: 'right',
               transitionDuration: '.5s',
@@ -70,7 +60,7 @@ export default class FixedMenu extends React.Component {
               justifyContent: 'center',
               top: 0,
               height: '4em',
-              right: !this.state.showMenu ? 30 : -10000,
+              right: !showNavMenu ? 30 : -10000,
               whitespace: 'nowrap',
               alignItems: 'center',
               width:  435,
@@ -85,11 +75,5 @@ export default class FixedMenu extends React.Component {
         </div>
       </header>
     )
-  }
-
-  toggleMenu(){
-    this.setState({
-      showMenu: !this.state.showMenu,
-    })
   }
 }

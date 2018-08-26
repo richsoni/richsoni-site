@@ -15,7 +15,8 @@ export default class MenuToggle extends React.Component {
 
   render(){
     const {
-      onToggle
+      onToggle,
+      toggleState,
     } = this.props;
 
     return <a
@@ -32,7 +33,7 @@ export default class MenuToggle extends React.Component {
             color: theme.bgColor,
             transitionProperty: 'font-size',
             transitionDuration: '.5s',
-            fontSize: this.props.showMenu ? 0 : '1em',
+            fontSize: toggleState ? 0 : '1em',
           }}
         ></i>
         <i
@@ -41,7 +42,7 @@ export default class MenuToggle extends React.Component {
             color: theme.bgColor,
             transitionProperty: 'font-size',
             transitionDuration: '.5s',
-            fontSize: this.props.showMenu ? '1em' : 0,
+            fontSize: toggleState ? '1em' : 0,
           }}
         ></i>
       </span>

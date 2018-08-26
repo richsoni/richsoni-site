@@ -1,7 +1,12 @@
 import React from 'react';
+import style from './style.module.css';
 
-export default () => {
+export default (props) => {
+  const {display} = props;
+  if(!display) { return(<div></div>);}
   return (
-    <div>Small Header</div>
+    <div className={style.overlay}>
+      Overlay Menu
+    </div>
   )
 }
