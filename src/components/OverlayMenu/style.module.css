@@ -2,11 +2,11 @@
   background-color: white;
   color: black;
   position: fixed;
-  top: 0;
+  top: 58px;
   height: 100%;
   overflow: hidden;
   z-index: 3;
-  padding-top: 4em;
+  padding-top: 3em;
   transition-property: top;
   transition-duration: .5s;
   display: flex;

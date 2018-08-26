@@ -15,7 +15,7 @@ const NavItems = navItems.map((ni) =>
 
 export default (props) => {
   const {display} = props;
-  // if(!display) { return(<div></div>);}
+  if(!display) { return(<div></div>);}
   return (
     <div className={style.overlay}>
       {NavItems}

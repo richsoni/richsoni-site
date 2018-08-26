@@ -19,7 +19,6 @@ export default class FixedMenu extends React.Component {
     const { showNavMenu } = this.props
     return (
       <header className={styles.header}>
-        <Logo style={{position: 'fixed'}} />
         <div style={{ }}>
           <nav
             style={{
