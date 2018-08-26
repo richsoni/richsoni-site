@@ -14,7 +14,7 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
 };
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
-  const {createPage } = boundActionCreators;
+  const {createPage, createRedirect } = boundActionCreators;
   return new Promise((resolve, reject) => {
     graphql(`
       {
@@ -37,6 +37,15 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             slug: node.fields.slug,
           }
         })
+        createRedirect({
+          fromPath: node.fields.slug.replace(/\/$/, '')+'.html',
+          toPath: node.fields.slug, isPermanent: true,
+          redirectInBrowser: true,
+        });
+        createRedirect({
+          fromPath: node.fields.slug.replace(/\/$/, ''),
+          toPath: node.fields.slug, isPermanent: true
+        });
       });
       resolve();
     })
