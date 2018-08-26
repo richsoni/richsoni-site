@@ -1,12 +1,26 @@
 import React from 'react';
 import style from './style.module.css';
+import navItems from '../ResponsiveMenu/nav-items';
+import socialButtons from '../ResponsiveMenu/social-items';
+import SocialButton from '../SocialButton/';
+
+const SocialButtons = socialButtons.map((sb) =>
+  <SocialButton service={sb.service} href={sb.href}>{sb.value || ''}</SocialButton>
+);
+
+const NavItems = navItems.map((ni) =>
+  <a className={style.navItem} href={ni.slug}>{ni.title}</a>,
+);
+
 
 export default (props) => {
   const {display} = props;
-  if(!display) { return(<div></div>);}
+  // if(!display) { return(<div></div>);}
   return (
     <div className={style.overlay}>
-      Overlay Menu
+      {NavItems}
+      <div className={style.social}>{ SocialButtons }</div>
+      <div className={style.copyright}> Copyright {new Date().getFullYear()} RichSoni, LLC</div>
     </div>
   )
 }

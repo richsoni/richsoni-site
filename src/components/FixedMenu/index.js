@@ -3,25 +3,16 @@ import styles from './index.module.css';
 import Logo from '../Logo/';
 import MenuToggle from '../MenuToggle/';
 import SocialButton from '../SocialButton/';
+import navItems from '../ResponsiveMenu/nav-items';
+import socialButtons from '../ResponsiveMenu/social-items';
 
-class SocialButtons extends React.Component {
-  render(){
-    return <nav className={this.props.className || ''} style={this.props.style || {}}>
-      <SocialButton service='spotify' href='https://open.spotify.com/artist/2ZmsHRFwH3sGTrarxwgK9O' />
-      <SocialButton service='soundcloud' href='https://soundcloud.com/richsoni' />
-      <SocialButton service='play' href='https://play.google.com/store/music/artist/i.json?id=Ap23zu5ishxv26bjhwt3z5kwx4q' />
-      <SocialButton service='twitter' href='https://twitter.com/richsoni'/>
-      <SocialButton service='facebook' href='https://www.facebook.com/richsonimusic/'/>
-      <SocialButton service='github' href='https://github.com/richsoni'/>
-      <SocialButton
-        href='http://richsoni.com/subscribe'
-        service='envelope'
-      >
-      &nbsp;Sign Up
-      </SocialButton>
-    </nav>
-  }
-}
+const SocialButtons = socialButtons.map((sb) =>
+  <SocialButton service={sb.service} href={sb.href}>{sb.value || ''}</SocialButton>
+);
+
+const NavItems = navItems.map((ni) =>
+  <a style={{color: 'black', background: 'none', textDecoration: 'none', marginLeft: '1em'}} href={ni.slug}>{ni.title}</a>,
+);
 
 export default class FixedMenu extends React.Component {
   render() {
@@ -48,12 +39,9 @@ export default class FixedMenu extends React.Component {
             }}
             className={styles.hoverDim}
           >
-            <a style={{color: 'black', background: 'none', textDecoration: 'none', marginLeft: '1em'}}href='/blog'>Blog</a>
-            <a style={{color: 'black', background: 'none', textDecoration: 'none', marginLeft: '1em'}}href='/albums'>Albums</a>
-            <a style={{color: 'black', background: 'none', textDecoration: 'none', marginLeft: '1em'}}href='/songs'>Songs</a>
-            <a style={{color: 'black', background: 'none', textDecoration: 'none', marginLeft: '1em'}} href='/shows'>Live</a>
+            { NavItems }
           </nav>
-          <SocialButtons
+          <nav
             style={{
               position: 'fixed',
               zIndex: 3,
@@ -71,7 +59,9 @@ export default class FixedMenu extends React.Component {
               display: 'flex',
             }}
             className={styles.hoverDim}
-          />
+          >
+            { SocialButtons }
+          </nav>
         </div>
       </header>
     )
