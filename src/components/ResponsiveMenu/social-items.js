@@ -2,7 +2,7 @@ export default [
   {
     service: 'spotify',
     href: 'https://open.spotify.com/artist/2ZmsHRFwH3sGTrarxwgK9O',
-    },
+  },
   {
     service: 'soundcloud',
     href: 'https://soundcloud.com/richsoni'
