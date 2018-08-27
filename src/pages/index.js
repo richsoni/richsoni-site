@@ -38,11 +38,71 @@ const ViewTypes = {
   list: 'list',
 };
 
+const Grid = (props) => {
+ const {post} = props
+ return (<Link
+    to={post.fields.slug}
+    style={{
+      background: 'none',
+      marginTop: '1em',
+      textShadow: 'none',
+      paddingBottom: '1em',
+      width: 250,
+      height: '21em',
+      display: 'block',
+    }}
+  >
+    <div
+      key={post.id}
+      style={{
+        display: 'block',
+        color: '#000',
+        textDecoration: 'none',
+        backgroundImage: `url(${post.frontmatter.hero})`,
+        height: 280,
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        backgroundColor: '#bebebe',
+      }} >
+    </div>
+    <h1 style={{
+      marginTop: '.4em',
+      marginBottom: '.4em',
+      fontSize: '1em',
+    }}>{post.frontmatter.title}</h1>
+  </Link>);
+}
+
+const List = (props) => {
+ const {post} = props
+ return (<Link
+    to={post.fields.slug}
+    style={{ alignItems: 'center', borderTop: '1px solid black', textDecoration: 'none', backgroundImage: 'none', display: 'flex', width: '100%', textDecoration: `none`, color: `inherit` }}
+  >
+    <div style={{minWidth: '250px', width: '250px'}}>{post.frontmatter.date}</div>
+    <div>{post.frontmatter.title}</div>
+  </Link>);
+}
+
+const Preview = (props) => {
+  const {post} = props
+ return (<div>
+    <Link
+      to={post.fields.slug}
+      style={{ textDecoration: `none`}}
+    ><span style={{fontSize: '1.5em'}}>{post.frontmatter.title}</span></Link>
+    <div><i>Posted {post.frontmatter.date}</i></div>
+    <p>{post.excerpt} <Link to={post.fields.slug}>Read More</Link></p>
+   </div>
+  );
+}
+
 export default class BlogIndex extends React.Component {
   constructor() {
     super()
     this.state = {
-      activeControlName: ViewTypes.preview
+      activeControlName: ViewTypes.list
     }
   }
 
@@ -52,28 +112,25 @@ export default class BlogIndex extends React.Component {
     return (
       <article className={styles.container}>
         <section className={styles.postList}>
-          <h4>Latest</h4>
           <ControlBar>
-             <Control className='fa-align-justify' active={ViewTypes.preview === activeControlName} onClick={() => this.onControlClick(ViewTypes.preview)} />
-             <Control className='fa-th' active={ViewTypes.grid === activeControlName} onClick={() => this.onControlClick(ViewTypes.grid)} />
-             <Control className='fa-list-ul' active={ViewTypes.list === activeControlName} onClick={() => this.onControlClick(ViewTypes.list)} />
+             <h4>Latest</h4>
+             <div>
+               <Control className='fa-align-justify' active={ViewTypes.preview === activeControlName} onClick={() => this.onControlClick(ViewTypes.preview)} />
+               <Control className='fa-th' active={ViewTypes.grid === activeControlName} onClick={() => this.onControlClick(ViewTypes.grid)} />
+               <Control className='fa-list-ul' active={ViewTypes.list === activeControlName} onClick={() => this.onControlClick(ViewTypes.list)} />
+             </div>
           </ControlBar>
-          {data.allMarkdownRemark.edges.map(({ node }) => (
-             <Link
-                to={node.fields.slug}
-                css={{ textDecoration: `none`, color: `inherit` }}
-              >
-                <div key={node.id}>
-                  <h3>
-                    {node.frontmatter.title}{" "}
-                    <span color="#BBB">— {node.frontmatter.date}</span>
-                  </h3>
-                  <p>{node.excerpt}</p>
-                </div>
-              </Link>
-            ))}
-          </section>
-        </article>
+          <div style={{marginTop: '1em', display: 'flex', flexFlow: 'row wrap', justifyContent: 'space-between'}}>
+            {data.allMarkdownRemark.edges.map(({ node }) => {
+              switch(activeControlName) {
+                case ViewTypes.preview: return <Preview post={node} />
+                case ViewTypes.grid: return <Grid post={node} />
+                case ViewTypes.list: return <List post={node} />
+              }
+            })}
+          </div>
+        </section>
+      </article>
     );
   }
 
@@ -96,6 +153,7 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY")
+            hero
           }
           fields {
             slug

@@ -1,5 +1,6 @@
 .container {
   width: 100%;
+  margin-top: 3em;
   padding-bottom: 2em;
   display: flex;
   flex-flow: row nowrap;
@@ -13,4 +14,18 @@
 .inactiveStack {
   font-weight: normal;
   cursor: pointer;
+}
+
+.controlBar {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #d8d8d8;
+  padding-bottom: 1em;
+}
+
+.controlBar h4 {
+  margin: 0;
 }
