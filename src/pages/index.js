@@ -123,9 +123,9 @@ export default class BlogIndex extends React.Component {
           <div style={{marginTop: '1em', display: 'flex', flexFlow: 'row wrap', justifyContent: 'space-between'}}>
             {data.allMarkdownRemark.edges.map(({ node }) => {
               switch(activeControlName) {
-                case ViewTypes.preview: return <Preview post={node} />
-                case ViewTypes.grid: return <Grid post={node} />
-                case ViewTypes.list: return <List post={node} />
+                case ViewTypes.preview: return <Preview key={node.id} post={node} />
+                case ViewTypes.grid: return <Grid key={node.id} post={node} />
+                case ViewTypes.list: return <List key={node.id} post={node} />
               }
             })}
           </div>

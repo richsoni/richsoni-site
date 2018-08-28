@@ -4,12 +4,19 @@ const path = require('path');
 exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators;
   if(node.internal.type === 'MarkdownRemark'){
+    const parent = getNode(node.parent);
+    console.log(parent)
     const slug = '/blog'+createFilePath({ node, getNode, basePath: 'posts' });
     createNodeField({
       node,
       name: 'slug',
       value: slug.replace("(","").replace(")", ""),
-    })
+    });
+    createNodeField({
+      node,
+      name: 'relativeDirectory',
+      value: parent.relativeDirectory,
+    });
   }
 };
 
@@ -23,6 +30,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             node {
               fields {
                 slug
+                relativeDirectory
               }
             }
           }

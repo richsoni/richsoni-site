@@ -7,11 +7,11 @@ import navItems from '../ResponsiveMenu/nav-items';
 import socialButtons from '../ResponsiveMenu/social-items';
 
 const SocialButtons = socialButtons.map((sb) =>
-  <SocialButton service={sb.service} href={sb.href}>{sb.value || ''}</SocialButton>
+  <SocialButton key={sb.href} service={sb.service} href={sb.href}>{sb.value || ''}</SocialButton>
 );
 
 const NavItems = navItems.map((ni) =>
-  <a style={{color: 'black', background: 'none', textDecoration: 'none', marginLeft: '1em'}} href={ni.slug}>{ni.title}</a>,
+  <a key={ni.slug} style={{color: 'black', background: 'none', textDecoration: 'none', marginLeft: '1em'}} href={ni.slug}>{ni.title}</a>,
 );
 
 export default class FixedMenu extends React.Component {

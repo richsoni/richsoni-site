@@ -5,11 +5,11 @@ import socialButtons from '../ResponsiveMenu/social-items';
 import SocialButton from '../SocialButton/';
 
 const SocialButtons = socialButtons.map((sb) =>
-  <SocialButton service={sb.service} href={sb.href}>{sb.value || ''}</SocialButton>
+  <SocialButton key={sb.service} service={sb.service} href={sb.href}>{sb.value || ''}</SocialButton>
 );
 
 const NavItems = navItems.map((ni) =>
-  <a className={style.navItem} href={ni.slug}>{ni.title}</a>,
+  <a key={ni.slug} className={style.navItem} href={ni.slug}>{ni.title}</a>,
 );
 
 

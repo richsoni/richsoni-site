@@ -7,6 +7,7 @@ const SocialButtons = socialButtons.map((sb) =>
   <SocialButton
     service={sb.service}
     href={sb.href}
+    key={sb.href}
     style={{marginBottom: 'none !important'}}
   >{sb.value || ''}</SocialButton>
 );

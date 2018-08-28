@@ -123,9 +123,9 @@ export default class BlogIndex extends React.Component {
           <div style={{marginTop: '1em', display: 'flex', flexFlow: 'row wrap', justifyContent: 'space-between'}}>
             {data.allMarkdownRemark.edges.map(({ node }) => {
               switch(activeControlName) {
-                case ViewTypes.preview: return <Preview post={node} />
-                case ViewTypes.grid: return <Grid post={node} />
-                case ViewTypes.list: return <List post={node} />
+                case ViewTypes.preview: return <Preview key={node.id} post={node} />
+                case ViewTypes.grid: return <Grid key={node.id} post={node} />
+                case ViewTypes.list: return <List key={node.id} post={node} />
               }
             })}
           </div>
@@ -145,6 +145,7 @@ export const query = graphql`
   query BlogIndex {
     allMarkdownRemark(
       sort: { order: DESC, fields: [fields___date] }
+      filter: { fields: { relativeDirectory: {eq: "posts"}  }}
       limit: 1000
     ) {
       edges {
