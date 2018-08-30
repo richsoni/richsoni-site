@@ -1,7 +1,7 @@
 ---
 title: Thanks For The Dream
 composed_at: 2017-11-04
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 Thanks for the dream  

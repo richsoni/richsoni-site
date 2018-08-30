@@ -1,7 +1,7 @@
 ---
 title: As Hard As I Fell
 composed_at: 2015-11-03
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 In the beginning, time took a pause  

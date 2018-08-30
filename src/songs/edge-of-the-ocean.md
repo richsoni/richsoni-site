@@ -1,7 +1,7 @@
 ---
 title: Edge Of The Ocean
 composed_at: 2015-01-23
-artist: [Bob Dylan, Rich Soni]
+artists: [Bob Dylan, Rich Soni]
 ---
 
 Are you here upside down  

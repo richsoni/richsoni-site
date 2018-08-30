@@ -1,7 +1,7 @@
 ---
 title: One Toe Out The Grave
 composed_at: 2015-08-18
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 Hard aint nothin'' mama  

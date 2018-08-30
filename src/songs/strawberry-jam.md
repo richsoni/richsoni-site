@@ -1,7 +1,7 @@
 ---
 title: Strawberry Jam
 composed_at: 2015-03-01
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 Strawberry jam in my bed  

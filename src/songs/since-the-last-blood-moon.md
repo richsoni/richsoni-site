@@ -1,7 +1,7 @@
 ---
 title: Since The Last Blood Moon
 composed_at: 2015-08-06
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 Tweak your mojo bag  

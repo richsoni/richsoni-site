@@ -1,4 +1,4 @@
 ---
 title: Old Dog Blue
-artist: Jim Jackson
+artists: [Jim Jackson]
 ---

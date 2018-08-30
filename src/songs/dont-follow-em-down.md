@@ -1,7 +1,7 @@
 ---
 title: Don't Follow Em' Down
 composed_at: 2018-03-08
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 What do you do

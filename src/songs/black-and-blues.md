@@ -1,7 +1,7 @@
 ---
 title: Black & Blues
 composed_at: 2016-10-14
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 It's a hard road  

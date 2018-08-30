@@ -1,4 +1,4 @@
 ---
 title: Casey Jones
-artist: Grateful Dead
+artists: [Grateful Dead]
 ---

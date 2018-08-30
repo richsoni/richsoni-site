@@ -1,7 +1,7 @@
 ---
 title: Working Overtime
 composed_at: 2015-01-08
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 Well Ive been under a guise

@@ -1,7 +1,7 @@
 ---
 title: Little Seaside Home
 composed_at: 2014-03-22
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 *Credit: Trad/Rich Soni*

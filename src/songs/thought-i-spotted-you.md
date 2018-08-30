@@ -1,7 +1,7 @@
 ---
 title: Thought I Spotted You
 composed_at: 2015-02-15
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 Thought I spotted today standing in a crowd  

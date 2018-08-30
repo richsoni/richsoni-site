@@ -1,6 +1,6 @@
 ---
 title: The Rare Auld Mountain Dew
-artist: [Traditional, Rich Soni]
+artists: [Traditional, Rich Soni]
 ---
 
 Let grasses grow

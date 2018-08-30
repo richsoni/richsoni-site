@@ -1,5 +1,5 @@
 ---
 title: Blues In A Bottle
-artist: Prince Albert Hunt
+artists: [Prince Albert Hunt]
 ---
 

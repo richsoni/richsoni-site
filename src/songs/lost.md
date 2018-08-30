@@ -1,4 +1,4 @@
 ---
 title: Lost
-artist: Buzz Busby
+artists: [Buzz Busby]
 ---

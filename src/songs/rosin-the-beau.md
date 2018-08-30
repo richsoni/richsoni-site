@@ -1,4 +1,4 @@
 ---
 title: Rosin The Beau
-artist: Traditional
+artists: [Traditional]
 ---

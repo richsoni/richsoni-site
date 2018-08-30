@@ -1,4 +1,4 @@
 ---
 title: Dire Wolf
-artist: Grateful Dead
+artists: [Grateful Dead]
 ---

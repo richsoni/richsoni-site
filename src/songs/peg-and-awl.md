@@ -1,4 +1,4 @@
 ---
 title: Peg & Awl
-artist: Traditional
+artists: [Traditional]
 ---

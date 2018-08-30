@@ -1,7 +1,7 @@
 ---
 title: The Ordinary Man and The Angel
 composed_at: 2017-01-02
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 I'm just a man  

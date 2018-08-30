@@ -1,7 +1,7 @@
 ---
 title: The Girl Who Laughs At The Moon
 composed_at: 2017-11-18
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 They say to stay away  

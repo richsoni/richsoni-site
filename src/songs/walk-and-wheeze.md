@@ -1,7 +1,7 @@
 ---
 title: Walk & Wheeze
 composed_at: 2017-05-09,2017-05-10
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 Bent my hat  

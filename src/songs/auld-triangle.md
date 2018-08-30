@@ -1,4 +1,4 @@
 ---
 title: Auld Triangle
-artist: Traditional
+artists: [Traditional]
 ---

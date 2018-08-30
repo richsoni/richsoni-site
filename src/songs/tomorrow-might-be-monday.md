@@ -1,7 +1,7 @@
 ---
 title: Tomorrow Might Be Monday
 composed_at: 2017-11-27
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 Oh the waitress hung her apron

@@ -1,5 +1,5 @@
 ---
 title: Soul
-artist: Andrew Nieporent
+artists: [Andrew Nieporent]
 ---
 

@@ -1,4 +1,4 @@
 ---
 title: For Me Grog
-artist: Traditional
+artists: [Traditional]
 ---

@@ -1,7 +1,7 @@
 ---
 title: Need For Love
 composed_at: 2016-08-12
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 Fools bolt like hermit crabs  

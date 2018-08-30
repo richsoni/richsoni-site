@@ -1,7 +1,7 @@
 ---
 title: Please Stand By
 composed_at: 2014-09-04
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 I made my way down to the love station  

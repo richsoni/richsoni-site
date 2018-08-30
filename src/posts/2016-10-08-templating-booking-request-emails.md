@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2016-10-08
-categories: diy template venue management
+categories: [diy template venue management]
 revision: 1
 title: Templating Your Booking Inquiry Emails
 author: Rich Soni

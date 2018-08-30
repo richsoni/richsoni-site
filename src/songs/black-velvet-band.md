@@ -1,4 +1,4 @@
 ---
 title: Black Velvet Band
-artist: Traditional
+artists: [Traditional]
 ---

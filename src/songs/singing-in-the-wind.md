@@ -1,6 +1,6 @@
 ---
 title: Singing In The Wind
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 Did you smell the roses in the air?  

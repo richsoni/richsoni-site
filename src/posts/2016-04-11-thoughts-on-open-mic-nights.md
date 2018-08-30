@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Thoughts On Open Mic Nights
-categories: open-mic
+categories: [open-mic]
 author: Rich Soni
 ---
 

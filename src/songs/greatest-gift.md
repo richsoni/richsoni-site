@@ -1,7 +1,7 @@
 ---
 title: Greatest Gift
 composed_at: 2015-07-23
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 Not a coat of many colors, gold frankincense or myrrh  

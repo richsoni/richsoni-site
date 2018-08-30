@@ -1,7 +1,7 @@
 ---
 title: Sweet Grass Memory
 composed_at: 2016-04
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 Taping up a wrinkled picture of her  

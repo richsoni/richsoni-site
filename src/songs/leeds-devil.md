@@ -1,7 +1,7 @@
 ---
 title: Leeds Devil
 composed_at: 2016-05-30
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 In the silt of Mullica River  

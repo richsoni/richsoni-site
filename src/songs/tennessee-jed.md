@@ -1,4 +1,4 @@
 ---
 title: Tennessee Jed
-artist: Grateful Dead
+artists: [Grateful Dead]
 ---

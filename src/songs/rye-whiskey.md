@@ -1,4 +1,4 @@
 ---
 title: Rye Whiskey
-artist: Traditional
+artists: [Traditional]
 ---

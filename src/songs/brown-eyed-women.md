@@ -1,4 +1,4 @@
 ---
 title: Brown Eyed Women
-artist: Grateful Dead
+artists: [Grateful Dead]
 ---

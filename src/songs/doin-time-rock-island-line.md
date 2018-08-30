@@ -1,4 +1,4 @@
 ---
 title: Doin' Time / Rock Island Line
-artist: [Johnny Cash, Ledbelly]
+artists: [Johnny Cash, Ledbelly]
 ---

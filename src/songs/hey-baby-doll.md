@@ -1,7 +1,7 @@
 ---
 title: Hey Baby Doll
 composed_at: 2015-10-27
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 Hey baby doll, how you livin'  

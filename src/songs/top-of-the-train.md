@@ -1,7 +1,7 @@
 ---
 title: Railroad Train
 composed_at: 2015-03-07
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 *Well, I always sit at the top when riding the railroad train*  

@@ -1,7 +1,7 @@
 ---
 title: Show Me Where
 composed_at: 2016-03-30
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 I gave my loving  

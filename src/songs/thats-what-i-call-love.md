@@ -1,7 +1,7 @@
 ---
 title: Thats What I Call Love
 composed_at: 2015-01-02
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 When the eyes see their match  

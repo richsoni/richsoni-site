@@ -1,7 +1,7 @@
 ---
 title: Wayward Sister
 composed_at: 2016-05-03
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 Hard luck don't go down easy  

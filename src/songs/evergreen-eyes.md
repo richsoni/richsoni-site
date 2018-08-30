@@ -1,7 +1,7 @@
 ---
 title: Evergreen Eyes
 composed_at: 2017-10-16
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 Evergreen Eyes  

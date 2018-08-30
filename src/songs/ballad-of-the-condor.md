@@ -1,6 +1,6 @@
 ---
 title: Ballad Of The Condor
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 Singing Jenny fading down the street  

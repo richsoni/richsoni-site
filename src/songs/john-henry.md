@@ -1,6 +1,6 @@
 ---
 title: John Henry
-artist: Traditional
+artists: [Traditional]
 ---
 
 Well John Henry was a little baby 

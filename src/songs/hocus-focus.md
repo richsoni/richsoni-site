@@ -1,7 +1,7 @@
 ---
 title: Hocus Focus
 composed_at: 2015-03-19
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 When she puts her hocus focus on me  

@@ -1,4 +1,4 @@
 ---
 title: McAlpines Fusiliers
-artist: Domenic Behan
+artists: [Domenic Behan]
 ---

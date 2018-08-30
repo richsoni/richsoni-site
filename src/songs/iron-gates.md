@@ -1,7 +1,7 @@
 ---
 title: Iron Gates
 composed_at: 2015-01-01
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 From the iron gates  

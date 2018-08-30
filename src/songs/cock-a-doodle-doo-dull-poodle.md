@@ -1,7 +1,6 @@
 ---
 title: Cock A Doodle Doo Dull Poodle
-composed_at: tk
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 Cock-a-doodle-doo, dull poodle  

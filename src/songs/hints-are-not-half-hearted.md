@@ -1,7 +1,7 @@
 ---
 title: Hints Are Not Half Hearted
 composed_at: 2015-03-20
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 Well, I think I'll call you late march snow  

@@ -1,7 +1,7 @@
 ---
 title: Together
 composed_at: 2012-09-21
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 Oh my baby, I love her so  

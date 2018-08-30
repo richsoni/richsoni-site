@@ -1,4 +1,4 @@
 ---
 title: Abbey Road Medley
-artist: The Beatles
+artists: [The Beatles]
 ---

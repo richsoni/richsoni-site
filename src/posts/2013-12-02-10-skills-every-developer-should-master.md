@@ -1,6 +1,6 @@
 ---
 layout: post
-categories: Coding
+categories: [Coding]
 avatar: "http://www.vtxoa.com/forums/customavatars/avatar31627_1.gif"
 hero: "http://www.unleashthefanboy.com/wp-content/uploads/2013/08/yoda-quotes.jpeg"
 tags: [coding, self development]

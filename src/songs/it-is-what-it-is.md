@@ -1,7 +1,7 @@
 ---
 title: It Is What It Is
 composed_at: 2015-11-23
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 I get a low down feeling  

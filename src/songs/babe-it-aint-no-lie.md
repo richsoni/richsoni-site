@@ -1,5 +1,5 @@
 ---
 title: Babe It Ain't No Lie
-artist: Elizabeth Cotton
+artists: [Elizabeth Cotton]
 ---
 

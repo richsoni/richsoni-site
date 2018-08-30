@@ -1,6 +1,6 @@
 ---
 layout: post
-categories: productivity
+categories: [productivity]
 tags: [technology, productivity, bash]
 blurb: 'Once this tool is understood, it provides levels of wizardry to its user'
 title: 'Practical Uses For Bash Globbing'

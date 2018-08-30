@@ -1,6 +1,6 @@
 ---
 title: Waterfallen
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 *Well, I fell into a river*  

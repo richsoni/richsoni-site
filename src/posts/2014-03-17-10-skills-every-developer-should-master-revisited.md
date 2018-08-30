@@ -2,7 +2,7 @@
 layout: post
 date: 2014-03-17
 title: 10 Tools Every Software Developer Should Know, Revisited
-categories: Coding
+categories: [Coding]
 avatar: '/blog/images/Yoda_Luke.jpg'
 hero: '/blog/images/Yoda_Luke.jpg'
 tags: [coding, self development]

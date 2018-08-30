@@ -1,7 +1,7 @@
 ---
 title: Tooth For Love
 composed_at: 2018-03-10
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 Don't want no bowl of ice cream baby  

@@ -3,7 +3,7 @@ layout: post
 categories: [coding]
 avatar: '/blog/images/github_pages_small.png'
 hero: '/blog/images/github_pages.png'
-tags: coding
+tags: [coding]
 blurb: 'The experience is painless, and fruitful.  It is useful for a multitude of purposes'
 title: 'Using Github Pages To Host Your Blog'
 date: 2013-12-03

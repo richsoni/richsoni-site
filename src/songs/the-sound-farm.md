@@ -1,7 +1,7 @@
 ---
 title: The Sound Farm
 composed_at: 2017-02-25
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 It's a long hard day  

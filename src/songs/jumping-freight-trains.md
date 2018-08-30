@@ -1,7 +1,7 @@
 ---
 title: Jumping Freight Trains
 composed_at: 2015-08-26
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 I was riding on the ghost line  

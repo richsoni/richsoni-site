@@ -1,7 +1,7 @@
 ---
 title: Planes, Trains, Autoresponders
 composed_at: 2016-06-01
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 Baby, lately  

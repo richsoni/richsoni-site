@@ -1,7 +1,7 @@
 ---
 title: One In A Million
 composed_at: 2016-02-02
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 If I had to ask you where the rain starts  

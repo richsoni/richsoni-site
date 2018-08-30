@@ -1,7 +1,7 @@
 ---
 title: Brokedown Saturday Night
 composed_at: 2018-06-09
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 I'll shoot the lights out

@@ -1,7 +1,7 @@
 ---
 title: Magellan & Me
 composed_at: 2017-10-05
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 Life's short if your lucky  

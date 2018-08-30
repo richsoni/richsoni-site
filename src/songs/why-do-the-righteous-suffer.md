@@ -1,7 +1,7 @@
 ---
 title: Why Do The Righteous Suffer
 composed_at: 2015-08
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 Lookie here friend  

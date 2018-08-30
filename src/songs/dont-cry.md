@@ -1,7 +1,7 @@
 ---
 title: Don't Cry
 composed_at: 2010-01-22
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 Don't cry, Don't cry  

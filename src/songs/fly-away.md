@@ -1,7 +1,7 @@
 ---
 title: Fly Away
 composed_at: 2016-04
-artist: Rich Soni
+artists: [Rich Soni]
 ---
 
 *Fly away into the sea breeze*  

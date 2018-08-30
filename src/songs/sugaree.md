@@ -1,4 +1,4 @@
 ---
 title: Sugaree
-artist: Grateful Dead
+artists: [Grateful Dead]
 ---
