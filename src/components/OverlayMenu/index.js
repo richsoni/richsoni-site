@@ -9,7 +9,7 @@ const SocialButtons = socialButtons.map((sb) =>
 );
 
 const NavItems = navItems.map((ni) =>
-  <a key={ni.slug} className={style.navItem} href={ni.slug}>{ni.title}</a>,
+  <a key={ni.url} className={style.navItem} href={ni.url}>{ni.title}</a>,
 );
 
 

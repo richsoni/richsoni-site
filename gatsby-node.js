@@ -1,21 +1,18 @@
-const { createFilePath } = require('gatsby-source-filesystem');
 const path = require('path');
+const buildExtraMarkdownFields = require('./lib/MarkdownFields');
 
 exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators;
   if(node.internal.type === 'MarkdownRemark'){
-    const parent = getNode(node.parent);
-    const slug = '/'+parent.relativeDirectory+createFilePath({ node, getNode, basePath: 'posts' });
-    createNodeField({
-      node,
-      name: 'slug',
-      value: slug.replace("(","").replace(")", ""),
-    });
-    createNodeField({
-      node,
-      name: 'relativeDirectory',
-      value: parent.relativeDirectory,
-    });
+    extraFields = buildExtraMarkdownFields({ node, getNode})
+    Object.keys(extraFields).map((k) => {
+      const value = extraFields[k];
+      createNodeField({
+        node,
+        name: k,
+        value: value,
+      });
+    })
   }
 };
 
@@ -28,7 +25,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           edges {
             node {
               fields {
-                slug
+                url
                 relativeDirectory
               }
             }
@@ -38,20 +35,20 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     `).then(result => {
       result.data.allMarkdownRemark.edges.forEach(({ node }) => {
         createPage({
-          path: node.fields.slug,
+          path: node.fields.url,
           component: path.resolve('./src/templates/blog-post.js'),
           context: {
-            slug: node.fields.slug,
+            url: node.fields.url,
           }
         })
         createRedirect({
-          fromPath: node.fields.slug.replace(/\/$/, '')+'.html',
-          toPath: node.fields.slug, isPermanent: true,
+          fromPath: node.fields.url.replace(/\/$/, '')+'.html',
+          toPath: node.fields.url, isPermanent: true,
           redirectInBrowser: true,
         });
         createRedirect({
-          fromPath: node.fields.slug.replace(/\/$/, ''),
-          toPath: node.fields.slug, isPermanent: true
+          fromPath: node.fields.url.replace(/\/$/, ''),
+          toPath: node.fields.url, isPermanent: true
         });
       });
       resolve();

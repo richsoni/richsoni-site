@@ -11,7 +11,7 @@ const SocialButtons = socialButtons.map((sb) =>
 );
 
 const NavItems = navItems.map((ni) =>
-  <a key={ni.slug} style={{color: 'black', background: 'none', textDecoration: 'none', marginLeft: '1em'}} href={ni.slug}>{ni.title}</a>,
+  <a key={ni.url} style={{color: 'black', background: 'none', textDecoration: 'none', marginLeft: '1em'}} href={ni.url}>{ni.title}</a>,
 );
 
 export default class FixedMenu extends React.Component {

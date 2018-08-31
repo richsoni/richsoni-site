@@ -1,13 +1,13 @@
 export default [{
-  slug: '/blog',
+  url: '/blog',
   title: 'Blog',
 }, {
-  slug: '/albums',
+  url: '/albums',
   title: 'Albums',
 },{
-  slug: 'songs',
+  url: '/songs',
   title: 'Songs',
 }, {
-  slug: '/shows',
+  url: '/shows',
   title: 'Events',
 }];

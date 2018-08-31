@@ -41,7 +41,7 @@ const ViewTypes = {
 const Grid = (props) => {
  const {post} = props
  return (<Link
-    to={post.fields.slug}
+    to={post.fields.url}
     style={{
       background: 'none',
       marginTop: '1em',
@@ -77,7 +77,7 @@ const Grid = (props) => {
 const List = (props) => {
  const {post} = props
  return (<Link
-    to={post.fields.slug}
+    to={post.fields.url}
     style={{ alignItems: 'center', borderTop: '1px solid black', textDecoration: 'none', backgroundImage: 'none', display: 'flex', width: '100%', textDecoration: `none`, color: `inherit` }}
   >
     <div style={{minWidth: '250px', width: '250px'}}>{post.frontmatter.date}</div>
@@ -89,11 +89,11 @@ const Preview = (props) => {
   const {post} = props
  return (<div>
     <Link
-      to={post.fields.slug}
+      to={post.fields.url}
       style={{ textDecoration: `none`}}
     ><span style={{fontSize: '1.5em'}}>{post.frontmatter.title}</span></Link>
     <div><i>Posted {post.frontmatter.date}</i></div>
-    <p>{post.excerpt} <Link to={post.fields.slug}>Read More</Link></p>
+    <p>{post.excerpt} <Link to={post.fields.url}>Read More</Link></p>
    </div>
   );
 }
@@ -157,7 +157,7 @@ export const query = graphql`
             hero
           }
           fields {
-            slug
+            url
             date
           }
           excerpt

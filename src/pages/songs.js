@@ -50,7 +50,7 @@ const parseSongs = (props) => {
       artists: artists,
       isMine: !!artists.match('Rich Soni'),
       composedAtMoment: composedAtMoment,
-      url: song.fields.slug,
+      url: song.fields.url,
       firstPerformanceMoment: null,
       firstPerformance: null,
       lastPerformanceMoment: null,
@@ -113,7 +113,7 @@ export const query = graphql`
             artists
           }
           fields {
-            slug
+            url
             date
           }
           excerpt

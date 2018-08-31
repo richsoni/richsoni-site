@@ -21,7 +21,7 @@ module.exports = {
       extract: [
         {
           name: 'path',
-          selector: /.+\/(\d+-\d+-\d+-[\w-]+)\.md$/,
+          selector: /.+\/(.*)\.md$/,
           replacer: '/$1/'
         },
         {
