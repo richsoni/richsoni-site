@@ -3,7 +3,7 @@ const buildExtraMarkdownFields = require('./lib/MarkdownFields');
 
 exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators;
-  if(node.internal.type === 'MarkdownRemark'){
+  if(node.internal.type === 'MarkdownRemark' || node.internal.type ==='LocationsYaml'){
     extraFields = buildExtraMarkdownFields({ node, getNode})
     Object.keys(extraFields).map((k) => {
       const value = extraFields[k];

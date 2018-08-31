@@ -25,11 +25,23 @@ module.exports = {
           replacer: '/$1/'
         },
         {
+          name: 'notdate',
+          selector: /.+\/\d+-\d+-\d+-([\w-]+)\.md$/,
+          replacer: '$1'
+        },
+        {
           name: 'date',
           selector: /.+\/(\d+-\d+-\d+)-[\w-]+\.md$/,
           replacer: '$1'
         }
       ]
     }
-  }
+  },
+  `gatsby-transformer-yaml`,
+  {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      path: `./src/data/`,
+    },
+  },
 ]};
