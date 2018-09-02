@@ -1,8 +1,14 @@
-(A) Songs performance stuff
-(A) Remove that bullshit theme
-(A) Port old homepage
-(A) Port albums
-(A) Port events
-(A) Disqus on Blog Posts
+(A) +1h Songs performance stuff
+(A) +2h Show index fixup
+(A) +1h Show Show
+(A) +1h Port albums
 
-(B) Redo name to richsoni
+(A) +2h Port old homepage
+(A) +1h Disqus on Blog Posts
+(A) +1h Songs Index Styling
+
+(B) Rename shows to events (code and everywhere)
+(B) Alias /shows to /events
+
+(C) +3h Remove that bullshit theme
+(C) Redo name to richsoni
