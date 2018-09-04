@@ -1,9 +1,11 @@
 .container {
-  width: 100%;
-  margin-top: 3em;
+  width: 960px;
+  margin: auto auto;
+  margin-top: 0em;
   padding-bottom: 2em;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
+  align-items: flex-start;
   justify-content: center;
 }
 
