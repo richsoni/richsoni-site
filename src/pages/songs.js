@@ -40,10 +40,22 @@ const tableFields = [
 ];
 
 const parseSongs = (props) => {
-  const songs = props.data.allMarkdownRemark.edges.map((s) => s.node)
+  const songs = props.data.songs.edges.map((s) => s.node)
+  const showsBySong = props.data.shows.edges.map((s) => s.node).filter((s) => s.frontmatter.setlist).reduce((memo, item) => {
+    (item.frontmatter.setlist || []).map((song) => {
+      if(!memo[song]) { memo[song] = [] }
+      memo[song].push(item.fields.date)
+    })
+    return memo;
+  }, {})
   return songs.map((song) => {
     const artists = song.frontmatter.artists.sort().join(', ')
     const composedAtMoment = momentify(song.frontmatter.composed_at);
+    const shows = showsBySong[song.fields.basename] || [];
+    const firstPerformance = shows[shows.length - 1];
+    const firstPerformanceMoment = momentify(firstPerformance)
+    const lastPerformance = shows[0];
+    const lastPerformanceMoment = momentify(lastPerformance)
     return {
       title: song.frontmatter.title,
       composedAt: composedAtMoment ? composedAtMoment.format('YYYY-MM-DD') : null,
@@ -51,10 +63,11 @@ const parseSongs = (props) => {
       isMine: !!artists.match('Rich Soni'),
       composedAtMoment: composedAtMoment,
       url: song.fields.url,
-      firstPerformanceMoment: null,
-      firstPerformance: null,
-      lastPerformanceMoment: null,
-      lastPerformance: null,
+      performanceCount: shows.length,
+      firstPerformanceMoment,
+      firstPerformance,
+      lastPerformanceMoment,
+      lastPerformance,
       key: song.id,
     }
   });
@@ -97,26 +110,45 @@ export default class SongIndex extends React.Component {
 
 export const query = graphql`
   query SongIndex {
-    allMarkdownRemark(
+    songs: allMarkdownRemark(
       sort: { order: DESC, fields: [fields___date] }
       filter: { fields: { relativeDirectory: {eq: "songs"}  }}
+      limit: 1000
+      ) {
+        edges {
+          node {
+            id
+            frontmatter {
+              title
+              date(formatString: "YYYY-MM-DD")
+              hero
+              composed_at(formatString: "YYYY-MM-DD")
+              artists
+            }
+            fields {
+              url
+              basename
+              date
+            }
+            excerpt
+          }
+        }
+      }
+
+    shows: allMarkdownRemark(
+      sort: { order: DESC, fields: [fields___date] }
+      filter: { fields: { relativeDirectory: {eq: "shows"}  }}
       limit: 1000
     ) {
       edges {
         node {
           id
-          frontmatter {
-            title
-            date(formatString: "YYYY-MM-DD")
-            hero
-            composed_at(formatString: "YYYY-MM-DD")
-            artists
-          }
           fields {
-            url
-            date
+            date(formatString: "YYYY-MM-DD")
           }
-          excerpt
+          frontmatter {
+            setlist
+          }
         }
       }
     }
