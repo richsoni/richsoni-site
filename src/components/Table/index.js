@@ -12,7 +12,8 @@ const Row = (props) => {
   return <a
     href={ url }
   > { fields.map((f) => {
-      return <span key={f.key}> {String(attributes[f.key])} </span>
+      const text = attributes[f.key];
+      return <span key={f.key}> {String(text || '')} </span>
     }) }
   </a>
 }

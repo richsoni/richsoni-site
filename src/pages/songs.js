@@ -46,7 +46,7 @@ const parseSongs = (props) => {
     const composedAtMoment = momentify(song.frontmatter.composed_at);
     return {
       title: song.frontmatter.title,
-      composedAt: composedAtMoment ? composedAtMoment : null,
+      composedAt: composedAtMoment ? composedAtMoment.format('YYYY-MM-DD') : null,
       artists: artists,
       isMine: !!artists.match('Rich Soni'),
       composedAtMoment: composedAtMoment,
