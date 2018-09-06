@@ -2,4 +2,7 @@
   padding: 3em;
   width: 960px;
   margin: auto auto;
+  display: flex;
+  flex-flow: column nowrap;
+  max-width: 100%;
 }
