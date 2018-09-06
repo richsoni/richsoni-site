@@ -2,15 +2,21 @@ import React from "react";
 import style from './style.css';
 import styleMod from './style.module.css';
 import moment from "moment";
+import Content from '../components/content/';
+import {Breadcrumbs} from '../components/Breadcrumbs/';
+import {Breadcrumb} from '../components/Breadcrumbs/';
 
 export default ({ data }) => {
   const post = data.markdownRemark;
   const date = new moment(post.fields.date).format('MM/DD/YYYY')
   return (
-    <div className={styleMod.wrapper} >
+    <Content>
       <div className='post'>
         <div className='post-heading'>
-          <h1 className='title'><a href='/blog'>Posts</a> / {post.frontmatter.title}</h1>
+          <Breadcrumbs>
+            <Breadcrumb href='/blog'>Posts</Breadcrumb>
+            <Breadcrumb>{post.frontmatter.title}</Breadcrumb>
+          </Breadcrumbs>
           <div style={{fontStyle: 'italic', marginBottom: '1em'}}>Posted {date}</div>
         </div>
       </div>
@@ -26,7 +32,7 @@ export default ({ data }) => {
       <div className='blog-post-body' >
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
-    </div>
+    </Content>
   );
 };
 

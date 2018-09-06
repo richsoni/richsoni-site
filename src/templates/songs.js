@@ -1,8 +1,10 @@
 import React from "react";
 import style from './style.css';
-import styleMod from './style.module.css';
 import moment from "moment";
 import {showsWithSong} from '../utils/data';
+import Content from '../components/content/';
+import {Breadcrumbs} from '../components/Breadcrumbs/';
+import {Breadcrumb} from '../components/Breadcrumbs/';
 
 export default ({ data }) => {
   const song = data.song;
@@ -10,14 +12,15 @@ export default ({ data }) => {
   const _showsWithSong = showsWithSong(data.shows, song.fields.basename);
   const performedLive = showsWithSong.length > 0 ? `Performed Live: ${_showsWithSong.length} ${_showsWithSong.length === 1 ? 'time' : 'times'}` : ''
   return (
-    <div className={styleMod.wrapper} >
-      <h1>
-        <a href="/songs">Songs</a> / {song.frontmatter.title}
-      </h1>
+    <Content>
+      <Breadcrumbs>
+        <Breadcrumb href="/songs">Songs</Breadcrumb>
+        <Breadcrumb>{song.frontmatter.title}</Breadcrumb>
+      </Breadcrumbs>
       {performedLive}
-      <div dangerouslySetInnerHTML={{__html: song.content}} />
+      <div style={{marginTop: '2em'}} dangerouslySetInnerHTML={{__html: song.html}} />
       <h3>Comments</h3>
-    </div>
+    </Content>
   )
 };
 

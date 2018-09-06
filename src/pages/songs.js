@@ -6,6 +6,9 @@ import Tabs from '../components/Tabs/';
 import {sortObjMomentASC, sortObjMomentDESC} from '../utils/sorting';
 import momentify from '../utils/momentify';
 import {showsBySong} from '../utils/data';
+import Content from '../components/content/';
+import {Breadcrumbs} from '../components/Breadcrumbs/';
+import {Breadcrumb} from '../components/Breadcrumbs/';
 
 const tableFields = [
   {
@@ -71,10 +74,12 @@ export default class SongIndex extends React.Component {
 
   render(){
     return (
-      <article className={styles.container}>
-        <h1>Songs</h1>
+      <Content>
+        <Breadcrumbs>
+          <Breadcrumb>Songs</Breadcrumb>
+        </Breadcrumbs>
         <Tabs tabs={this.tabs()} />
-      </article>
+      </Content>
     );
   }
 

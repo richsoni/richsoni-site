@@ -33,6 +33,7 @@ const parseShows = (props) => {
       location,
       locationString: `${location.address.locality}, ${location.address.region}`,
       typeString: type(show.frontmatter.type),
+      date: show.fields.date,
       dateString: momentify(show.fields.date).format("MM/DD/YY"),
       moment: momentify(show.fields.date),
       venueString: location.name,
@@ -66,6 +67,7 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "YYYY-MM-DD")
+            type
             hero
             composed_at(formatString: "YYYY-MM-DD")
             artists

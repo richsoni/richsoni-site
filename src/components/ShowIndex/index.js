@@ -1,10 +1,15 @@
 import React from 'react';
 import Table from '../Table/';
 import {sortASC, sortDESC} from '../Table/dateSort';
+import Content from '../content/';
+import {Breadcrumbs} from '../Breadcrumbs/';
+import {Breadcrumb} from '../Breadcrumbs/';
 
 export default (props) => {
-  return <div>
-    <h2>Upcoming Shows</h2>
+  return <Content>
+    <Breadcrumbs>
+      <Breadcrumb>Upcoming Events</Breadcrumb>
+    </Breadcrumbs>
     <Table
        fields={[{
          title: 'Date',
@@ -28,7 +33,10 @@ export default (props) => {
        items={props.upcomingShows}
        sortDefaultKey='dateString'
     />
-    <h2>Past Shows</h2>
+    <div style={{marginTop: '2em'}} />
+    <Breadcrumbs>
+      <Breadcrumb>Past Shows</Breadcrumb>
+    </Breadcrumbs>
     <Table
        fields={[{
          title: 'Date',
@@ -50,5 +58,5 @@ export default (props) => {
        sortDefaultKey='dateString'
        sortDefaultDirection='DESC'
     />
-  </div>
+  </Content>
 }

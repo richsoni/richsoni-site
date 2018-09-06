@@ -1,6 +1,9 @@
 import React from "react";
 import Link from 'gatsby-link';
 import styles from './style.module.css';
+import Content from '../components/content/';
+import {Breadcrumbs} from '../components/Breadcrumbs/';
+import {Breadcrumb} from '../components/Breadcrumbs/';
 
 const ControlBar = (props) => (
   <div className={styles.controlBar}>{props.children}</div>
@@ -110,7 +113,10 @@ export default class BlogIndex extends React.Component {
     const {data} = this.props;
     const {activeControlName} = this.state
     return (
-      <article className={styles.container}>
+      <Content>
+         <Breadcrumbs>
+            <Breadcrumb>Posts</Breadcrumb>
+         </Breadcrumbs>
         <section className={styles.postList}>
           <ControlBar>
              <h4>Latest</h4>
@@ -130,7 +136,7 @@ export default class BlogIndex extends React.Component {
             })}
           </div>
         </section>
-      </article>
+      </Content>
     );
   }
 
