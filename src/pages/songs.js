@@ -5,6 +5,7 @@ import Table from '../components/Table/';
 import Tabs from '../components/Tabs/';
 import {sortObjMomentASC, sortObjMomentDESC} from '../utils/sorting';
 import momentify from '../utils/momentify';
+import {showsBySong} from '../utils/data';
 
 const tableFields = [
   {
@@ -41,17 +42,11 @@ const tableFields = [
 
 const parseSongs = (props) => {
   const songs = props.data.songs.edges.map((s) => s.node)
-  const showsBySong = props.data.shows.edges.map((s) => s.node).filter((s) => s.frontmatter.setlist).reduce((memo, item) => {
-    (item.frontmatter.setlist || []).map((song) => {
-      if(!memo[song]) { memo[song] = [] }
-      memo[song].push(item.fields.date)
-    })
-    return memo;
-  }, {})
+  const _showsBySong = showsBySong(props.data.shows, props.data.songs);
   return songs.map((song) => {
     const artists = song.frontmatter.artists.sort().join(', ')
     const composedAtMoment = momentify(song.frontmatter.composed_at);
-    const shows = showsBySong[song.fields.basename] || [];
+    const shows = _showsBySong[song.fields.basename] || [];
     const firstPerformance = shows[shows.length - 1];
     const firstPerformanceMoment = momentify(firstPerformance)
     const lastPerformance = shows[0];
@@ -113,7 +108,6 @@ export const query = graphql`
     songs: allMarkdownRemark(
       sort: { order: DESC, fields: [fields___date] }
       filter: { fields: { relativeDirectory: {eq: "songs"}  }}
-      limit: 1000
       ) {
         edges {
           node {
@@ -138,7 +132,6 @@ export const query = graphql`
     shows: allMarkdownRemark(
       sort: { order: DESC, fields: [fields___date] }
       filter: { fields: { relativeDirectory: {eq: "shows"}  }}
-      limit: 1000
     ) {
       edges {
         node {

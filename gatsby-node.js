@@ -1,5 +1,6 @@
 const path = require('path');
 const buildExtraMarkdownFields = require('./lib/MarkdownFields');
+const existsSync = require(`fs-exists-sync`)
 
 exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators;
@@ -27,6 +28,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               fields {
                 url
                 relativeDirectory
+                basename
               }
             }
           }
@@ -34,22 +36,28 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       }
     `).then(result => {
       result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-        createPage({
-          path: node.fields.url,
-          component: path.resolve('./src/templates/blog-post.js'),
-          context: {
-            url: node.fields.url,
-          }
-        })
-        createRedirect({
-          fromPath: node.fields.url.replace(/\/$/, '')+'.html',
-          toPath: node.fields.url, isPermanent: true,
-          redirectInBrowser: true,
-        });
-        createRedirect({
-          fromPath: node.fields.url.replace(/\/$/, ''),
-          toPath: node.fields.url, isPermanent: true
-        });
+        const type = node.fields.relativeDirectory;
+        const url = node.fields.url;
+        const template = path.resolve(`./src/templates/${type}.js`);
+        if(existsSync(template))
+        {
+          createPage({
+            path: url,
+            component: template,
+            context: {
+              url
+            }
+          })
+          createRedirect({
+            fromPath: url.replace(/\/$/, '')+'.html',
+            toPath: url, isPermanent: true,
+            redirectInBrowser: true,
+          });
+          createRedirect({
+            fromPath: url.replace(/\/$/, ''),
+            toPath: url, isPermanent: true
+          });
+        }
       });
       resolve();
     })
