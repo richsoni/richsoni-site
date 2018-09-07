@@ -1,6 +1,5 @@
 ---
 title: Amelia
-composed_at: tk
 artists: [Rich Soni]
 ---
 

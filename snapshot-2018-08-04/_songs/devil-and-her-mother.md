@@ -1,6 +1,5 @@
 ---
 title: Devil & Her Mother
-composed_at: tk
 artist: Rich Soni
 ---
 

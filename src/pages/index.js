@@ -152,12 +152,11 @@ export const query = graphql`
           id
           frontmatter {
             title
-            date(formatString: "DD MMMM, YYYY")
             hero
           }
           fields {
             url
-            date
+            date(formatString: "DD MMMM, YYYY")
           }
           excerpt
         }

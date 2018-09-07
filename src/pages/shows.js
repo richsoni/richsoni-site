@@ -66,15 +66,12 @@ export const query = graphql`
           id
           frontmatter {
             title
-            date(formatString: "YYYY-MM-DD")
             type
-            hero
-            composed_at(formatString: "YYYY-MM-DD")
             artists
           }
           fields {
             url
-            date
+            date(formatString: "YYYY-MM-DD")
             notdate
           }
           excerpt
