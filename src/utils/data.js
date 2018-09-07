@@ -1,26 +1,26 @@
-export const showsWithSetlist = (shows) => {
-  return shows
+export const eventsWithSetlist = (events) => {
+  return events
     .edges
-    .map((s) => s.node)
-    .filter((s) => s.frontmatter.setlist)
+    .map((e) => e.node)
+    .filter((e) => e.frontmatter.setlist)
 };
 
-export const showsBySong = (shows, songs) => {
-  return showsWithSetlist(shows)
-  .reduce((songs, show) => {
-    (show.frontmatter.setlist || []).map((song) => {
+export const eventsBySong = (events, songs) => {
+  return eventsWithSetlist(events)
+  .reduce((songs, event) => {
+    (event.frontmatter.setlist || []).map((song) => {
       if(!songs[song]) { songs[song] = [] }
-      songs[song].push(show.fields.date)
+      songs[song].push(event.fields.date)
     });
     return songs;
   }, {});
 }
 
-export const showsWithSong = (shows, song) => {
-  return shows
+export const eventsWithSong = (events, song) => {
+  return events
     .edges
-    .filter((show) => show.node.frontmatter.setlist)
-    .filter((show) => show.node.frontmatter.setlist.includes(song));
+    .filter((event) => event.node.frontmatter.setlist)
+    .filter((event) => event.node.frontmatter.setlist.includes(song));
 }
 
 export const songsByBasename = (songs) => {

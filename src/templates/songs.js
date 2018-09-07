@@ -1,7 +1,7 @@
 import React from "react";
 import style from './style.css';
 import moment from "moment";
-import {showsWithSong} from '../utils/data';
+import {eventsWithSong} from '../utils/data';
 import Content from '../components/content/';
 import {Breadcrumbs} from '../components/Breadcrumbs/';
 import {Breadcrumb} from '../components/Breadcrumbs/';
@@ -9,8 +9,8 @@ import {Breadcrumb} from '../components/Breadcrumbs/';
 export default ({ data }) => {
   const song = data.song;
   const date = new moment(song.fields.composedAt).format('MM/DD/YYYY')
-  const _showsWithSong = showsWithSong(data.shows, song.fields.basename);
-  const performedLive = showsWithSong.length > 0 ? `Performed Live: ${_showsWithSong.length} ${_showsWithSong.length === 1 ? 'time' : 'times'}` : ''
+  const _eventsWithSong = eventsWithSong(data.events, song.fields.basename);
+  const performedLive = eventsWithSong.length > 0 ? `Performed Live: ${_eventsWithSong.length} ${_eventsWithSong.length === 1 ? 'time' : 'times'}` : ''
   return (
     <Content>
       <Breadcrumbs>
@@ -37,9 +37,9 @@ export const query = graphql`
       }
     }
 
-    shows: allMarkdownRemark(
+    events: allMarkdownRemark(
       sort: { order: DESC, fields: [fields___date] }
-      filter: { fields: { relativeDirectory: {eq: "shows"}  }}
+      filter: { fields: { relativeDirectory: {eq: "events"}  }}
     ) {
       edges {
         node {

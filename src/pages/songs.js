@@ -5,7 +5,7 @@ import Table from '../components/Table/';
 import Tabs from '../components/Tabs/';
 import {sortObjMomentASC, sortObjMomentDESC} from '../utils/sorting';
 import momentify from '../utils/momentify';
-import {showsBySong} from '../utils/data';
+import {eventsBySong} from '../utils/data';
 import Content from '../components/content/';
 import {Breadcrumbs} from '../components/Breadcrumbs/';
 import {Breadcrumb} from '../components/Breadcrumbs/';
@@ -45,14 +45,14 @@ const tableFields = [
 
 const parseSongs = (props) => {
   const songs = props.data.songs.edges.map((s) => s.node)
-  const _showsBySong = showsBySong(props.data.shows, props.data.songs);
+  const _eventsBySong = eventsBySong(props.data.events, props.data.songs);
   return songs.map((song) => {
     const artists = song.frontmatter.artists.sort().join(', ')
     const composedAtMoment = momentify(song.frontmatter.composed_at);
-    const shows = _showsBySong[song.fields.basename] || [];
-    const firstPerformance = shows[shows.length - 1];
+    const events = _eventsBySong[song.fields.basename] || [];
+    const firstPerformance = events[events.length - 1];
     const firstPerformanceMoment = momentify(firstPerformance)
-    const lastPerformance = shows[0];
+    const lastPerformance = events[0];
     const lastPerformanceMoment = momentify(lastPerformance)
     return {
       title: song.frontmatter.title,
@@ -61,7 +61,7 @@ const parseSongs = (props) => {
       isMine: !!artists.match('Rich Soni'),
       composedAtMoment: composedAtMoment,
       url: song.fields.url,
-      performanceCount: shows.length,
+      performanceCount: events.length,
       firstPerformanceMoment,
       firstPerformance,
       lastPerformanceMoment,
@@ -133,9 +133,9 @@ export const query = graphql`
         }
       }
 
-    shows: allMarkdownRemark(
+    events: allMarkdownRemark(
       sort: { order: DESC, fields: [fields___date] }
-      filter: { fields: { relativeDirectory: {eq: "shows"}  }}
+      filter: { fields: { relativeDirectory: {eq: "events"}  }}
     ) {
       edges {
         node {

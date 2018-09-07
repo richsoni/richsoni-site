@@ -1,64 +1,63 @@
 import React from "react";
 import Link from 'gatsby-link';
 import moment from 'moment';
-import {showNameLong, type} from '../utils/presenters';
-import Presenter from '../components/ShowIndex/';
+import {eventNameLong, type} from '../utils/presenters';
+import Presenter from '../components/EventIndex/';
 import momentify from '../utils/momentify';
 
-const upcomingShows = (shows = []) => {
+const upcomingEvents = (events = []) => {
   const now = moment.utc()
-  return shows
-    .filter((show) => momentify(show.date) > now)
+  return events
+    .filter((event) => momentify(event.date) > now)
     .sort((a, b) => {
       return momentify(a.date) - momentify(b.date)
     })
 }
 
-const pastShows = (shows = []) => {
+const pastEvents = (events = []) => {
   const now = moment.utc()
-  return shows
-    .filter((show) => momentify(show.date) < now)
+  return events
+    .filter((e) => momentify(e.date) < now)
     .sort((a, b) => {
       return momentify(b.date) - momentify(a.date)
     })
 }
 
-const parseShows = (props) => {
+const parseEvents = (props) => {
   const locations = props.data.locations.edges.map((e) => e.node);
-  const shows =  props.data.shows.edges.map((e) => {
-    const show = e.node;
-    const location = locations.find((l) => l.fields.basename === show.fields.notdate)
+  const events =  props.data.events.edges.map((e) => {
+    const event = e.node;
+    const location = locations.find((l) => l.fields.basename === event.fields.notdate)
     return {
-      ...show,
+      ...event,
       location,
       locationString: `${location.address.locality}, ${location.address.region}`,
-      typeString: type(show.frontmatter.type),
-      date: show.fields.date,
-      dateString: momentify(show.fields.date).format("MM/DD/YY"),
-      moment: momentify(show.fields.date),
+      typeString: type(event.frontmatter.type),
+      date: event.fields.date,
+      dateString: momentify(event.fields.date).format("MM/DD/YY"),
+      moment: momentify(event.fields.date),
       venueString: location.name,
     }
   });
-  console.log(shows)
-  return shows;
+  return events;
 }
 
-export default class ShowIndex extends React.Component {
+export default class EventIndex extends React.Component {
   render(){
-    const loadedShows = parseShows(this.props);
+    const loadedEvents = parseEvents(this.props);
     return <Presenter
       locations={this.props.locations}
-      upcomingShows={upcomingShows(loadedShows)}
-      pastShows={pastShows(loadedShows)}
+      upcomingEvents={upcomingEvents(loadedEvents)}
+      pastEvents={pastEvents(loadedEvents)}
     />
   }
 }
 
 export const query = graphql`
-  query ShowIndex {
-    shows: allMarkdownRemark(
+  query EventIndex {
+    events: allMarkdownRemark(
       sort: { order: DESC, fields: [fields___date] }
-      filter: { fields: { relativeDirectory: {eq: "shows"}  }}
+      filter: { fields: { relativeDirectory: {eq: "events"}  }}
       limit: 1000
     ) {
       edges {

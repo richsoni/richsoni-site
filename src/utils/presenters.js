@@ -1,8 +1,8 @@
 import moment from 'moment';
 import momentify from './momentify';
 
-export const showNameLong = (show, _location) => {
-  return `${momentify(show.date).format("MMM. DD, YYYY")} / ${_location.address.locality}, ${_location.address.region}`;
+export const eventNameLong = (event, _location) => {
+  return `${momentify(event.date).format("MMM. DD, YYYY")} / ${_location.address.locality}, ${_location.address.region}`;
 }
 
 export const type = (type) => {
@@ -14,3 +14,12 @@ export const type = (type) => {
     default: return 'Headliner';
   }
 }
+export const MMDDYYYY = (date) => {
+  if(!date) { return '' }
+  return `${momentify(date).format("MMM. DD, YYYY")}`;
+}
+
+export const cityCommaState = (address) => {
+  return `${address.locality}, ${address.region}`;
+}
+

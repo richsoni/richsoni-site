@@ -8,6 +8,6 @@ export default [{
   url: '/songs',
   title: 'Songs',
 }, {
-  url: '/shows',
+  url: '/events',
   title: 'Events',
 }];

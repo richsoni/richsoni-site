@@ -1,24 +1,17 @@
-const React = require("react")
-const assign = require("object-assign")
+import React from 'react';
+import assign from 'object-assign';
+import styles from './style.module.css';
 
 class SocialButton extends React.Component{
   render(){
     return <li
-      className='social-button'
+      className={styles.container}
       style={assign({listStyle: 'none'},this.props.style)}
     >
       <a
         title={this.props.service}
         href={this.props.href}
-        style={{
-          padding: 10,
-          lineHeight: '2.5em',
-          textAlign: 'center',
-          color: 'black',
-          textDecoration: 'none',
-          cursor: 'pointer',
-          background: 'none',
-        }}
+        className={styles.a}
       >
         <i className={`fa fa-${this.props.service}`}></i>
         <span>{this.props.children}</span>

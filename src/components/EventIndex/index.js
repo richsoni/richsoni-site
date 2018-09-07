@@ -30,12 +30,12 @@ export default (props) => {
          title: 'Location',
          key: 'locationString',
        }]}
-       items={props.upcomingShows}
+       items={props.upcomingEvents}
        sortDefaultKey='dateString'
     />
     <div style={{marginTop: '2em'}} />
     <Breadcrumbs>
-      <Breadcrumb>Past Shows</Breadcrumb>
+      <Breadcrumb>Past Events</Breadcrumb>
     </Breadcrumbs>
     <Table
        fields={[{
@@ -54,7 +54,7 @@ export default (props) => {
          title: 'Location',
          key: 'locationString',
        }]}
-       items={props.pastShows}
+       items={props.pastEvents}
        sortDefaultKey='dateString'
        sortDefaultDirection='DESC'
     />

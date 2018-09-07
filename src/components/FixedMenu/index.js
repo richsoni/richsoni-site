@@ -22,42 +22,17 @@ export default class FixedMenu extends React.Component {
         <div style={{ }}>
           <nav
             style={{
-              position: 'fixed',
-              backgroundColor: 'white',
-              zIndex: 3,
-              display: 'flex',
-              justifyContent: 'flex-end',
-              top: 0,
-              height: '2.8em',
               right: showNavMenu ? 80 : -10000,
-              alignItems: 'center',
-              transitionProperty: 'right',
-              transitionDuration: '.5s',
-              width: 435,
-              overflow: 'hidden'
             }}
-            className={styles.hoverDim}
+            className={styles.navItemsContainer}
           >
             { NavItems }
           </nav>
           <nav
             style={{
-              position: 'fixed',
-              zIndex: 3,
-              justifyContent: 'center',
-              top: 0,
-              height: '4em',
-              right: !showNavMenu ? 30 : -10000,
-              whitespace: 'nowrap',
-              alignItems: 'center',
-              width:  435,
-              transitionProperty: 'right',
-              transitionDuration: '.5s',
-              overflow: 'hidden',
-              fontSize: '.8em',
-              display: 'flex',
+              right: !showNavMenu ? 64 : -10000,
             }}
-            className={styles.hoverDim}
+            className={styles.socialButtonsContainer}
           >
             { SocialButtons }
           </nav>
