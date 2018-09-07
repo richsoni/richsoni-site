@@ -22,3 +22,11 @@ export const showsWithSong = (shows, song) => {
     .filter((show) => show.node.frontmatter.setlist)
     .filter((show) => show.node.frontmatter.setlist.includes(song));
 }
+
+export const songsByBasename = (songs) => {
+  return songs.edges.reduce((songsByBasename, song) => {
+    return {...songsByBasename,
+      [song.node.fields.basename]: song.node,
+    };
+  }, {})
+};

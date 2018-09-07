@@ -3,29 +3,12 @@ import Content from '../components/content/';
 import {Breadcrumbs} from '../components/Breadcrumbs/';
 import {Breadcrumb} from '../components/Breadcrumbs/';
 import styles from './albumStyles.module.css';
+import AlbumArtwork from '../components/AlbumArtwork/';
 
 const AlbumDisplay = (props) => {
-  return <div>
+  return <div className={styles.list}>
     {props.children}
   </div>
-}
-
-const Album = (props) => {
-  return (
-    <a
-      className={styles.item}
-      href={props.data.fields.url}
-      style={{backgroundImage: `url(/images/releases/${props.data.fields.basename}.png`}}
-    >
-      <div className={styles.disc}>
-        💿
-      </div>
-      <div className={styles.overlay}>
-        <div className={styles.title}>{props.data.frontmatter.title}</div>
-        <div className={styles.year}>{props.data.frontmatter.releaseYear}</div>
-      </div>
-    </a>
-  );
 }
 
 export default class AlbumIndex extends React.Component {
@@ -36,7 +19,7 @@ export default class AlbumIndex extends React.Component {
       </Breadcrumbs>
       <AlbumDisplay>
         {this.props.data.albums.edges.map((a) => a.node).map((a) => {
-          return <Album key={a.id} data={a} />
+          return <AlbumArtwork overlay={true} clickable={true} key={a.id} className={styles.item} data={a} />
         })}
       </AlbumDisplay>
     </Content>

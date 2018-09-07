@@ -14,35 +14,6 @@
   display: flex;
   align-items: flex-end;
   text-decoration: none !important;
-  position: relative;
-  background-image: url('/images/releases/default.png');
-  z-index: 1;
-}
-
-.disc {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-shadow: none;
-  font-size: 500%;
-  z-index: -1;
-  opacity: .5;
-}
-
-
-.overlay {
-  height: 45%;
-  background-color: rgba(0,0,0,.8);
-  width: 100%;
-  color: white;
-  padding: 10px;
-  box-sizing: border-box;
-  display: none;
-}
-
-.item:hover .overlay {
-  display: block;
 }
 
 @media(min-width: 320px) {
