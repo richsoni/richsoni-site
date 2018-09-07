@@ -13,7 +13,7 @@ const SocialButtons = socialButtons.map((sb) =>
 
 const NavItems = navItems.map((ni) =>
   <div className={hoverDim.hoverDim}>
-    <a key={ni.url} style={{marginLeft: '1em'}} href={ni.url}>{ni.title}</a>
+    <a key={ni.url} className={styles.navItem} href={ni.url}>{ni.title}</a>
   </div>
 );
 

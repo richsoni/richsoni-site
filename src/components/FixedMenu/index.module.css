@@ -3,6 +3,11 @@
   font-size: 1.5em;
 }
 
+.navItem, .navItem:visited {
+  margin-left: 1em;
+  color: black;
+}
+
 .navItemsContainer {
   position: fixed;
   background-color: white;

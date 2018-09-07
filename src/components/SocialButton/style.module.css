@@ -2,7 +2,7 @@
   margin: 0;
 }
 
-.a {
+.a, .a:visited {
   padding: 10px;
   line-height: 2.5em;
   text-align: center;

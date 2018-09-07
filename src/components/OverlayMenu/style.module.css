@@ -16,7 +16,7 @@
   flex-direction:  column;
 }
 
-.navItem {
+.navItem, .navItem:visited {
   font-size: 1.5em;
   text-decoration: none !important;
   background-image: none;
