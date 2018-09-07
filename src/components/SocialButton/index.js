@@ -1,11 +1,12 @@
 import React from 'react';
 import assign from 'object-assign';
 import styles from './style.module.css';
+import hoverDim from '../../styles/hoverDim.module.css';
 
 class SocialButton extends React.Component{
   render(){
     return <li
-      className={styles.container}
+      className={`${styles.container} ${hoverDim.hoverDim}`}
       style={assign({listStyle: 'none'},this.props.style)}
     >
       <a

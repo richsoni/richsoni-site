@@ -5,13 +5,16 @@ import MenuToggle from '../MenuToggle/';
 import SocialButton from '../SocialButton/';
 import navItems from '../ResponsiveMenu/nav-items';
 import socialButtons from '../ResponsiveMenu/social-items';
+import hoverDim from '../../styles/hoverDim.module.css';
 
 const SocialButtons = socialButtons.map((sb) =>
   <SocialButton key={sb.href} service={sb.service} href={sb.href}>{sb.value || ''}</SocialButton>
 );
 
 const NavItems = navItems.map((ni) =>
-  <a key={ni.url} style={{color: 'black', background: 'none', textDecoration: 'none', marginLeft: '1em'}} href={ni.url}>{ni.title}</a>,
+  <div className={hoverDim.hoverDim}>
+    <a key={ni.url} style={{marginLeft: '1em'}} href={ni.url}>{ni.title}</a>
+  </div>
 );
 
 export default class FixedMenu extends React.Component {
@@ -24,7 +27,7 @@ export default class FixedMenu extends React.Component {
             style={{
               right: showNavMenu ? 80 : -10000,
             }}
-            className={styles.navItemsContainer}
+            className={`${styles.navItemsContainer}`}
           >
             { NavItems }
           </nav>
@@ -32,7 +35,7 @@ export default class FixedMenu extends React.Component {
             style={{
               right: !showNavMenu ? 64 : -10000,
             }}
-            className={styles.socialButtonsContainer}
+            className={`${styles.socialButtonsContainer}`}
           >
             { SocialButtons }
           </nav>
