@@ -5,6 +5,9 @@
 (A) +1h Songs Index Styling
 
 
+(A) Redirect /blog to /posts
+(A) Redirect /shows to /events
+
 (B) Rename blog to posts
 (B) Alias /blog to /posts
 

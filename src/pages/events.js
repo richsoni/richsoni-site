@@ -29,13 +29,14 @@ const parseEvents = (props) => {
     const event = e.node;
     const location = locations.find((l) => l.fields.basename === event.fields.notdate)
     return {
-      ...event,
       location,
       locationString: `${location.address.locality}, ${location.address.region}`,
       typeString: type(event.frontmatter.type),
       date: event.fields.date,
       dateString: momentify(event.fields.date).format("MM/DD/YY"),
       moment: momentify(event.fields.date),
+      startTime: event.frontmatter.startTime,
+      url: event.fields.url,
       venueString: location.name,
     }
   });
@@ -67,6 +68,7 @@ export const query = graphql`
             title
             type
             artists
+            startTime
           }
           fields {
             url
@@ -83,6 +85,7 @@ export const query = graphql`
       node {
         fields {
           basename
+          url
         }
         name
         address {

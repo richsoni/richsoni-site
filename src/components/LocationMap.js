@@ -1,6 +1,6 @@
-import React from 'react';
-
+import React from "react";
 export default (props) => {
+  console.log('x', props)
   const address = [
     props.name,
     props.address.address_1,

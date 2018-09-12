@@ -5,7 +5,7 @@ import Content from '../components/content/';
 import {Breadcrumbs} from '../components/Breadcrumbs/';
 import {Breadcrumb} from '../components/Breadcrumbs/';
 import AlbumArtwork from '../components/AlbumArtwork/';
-import {songsByBasename} from '../utils/data';
+import {nodesByBasename} from '../utils/data';
 
 const Track = (props) => {
   return <li><a href={props.data.fields.url}>{props.data.frontmatter.title}</a></li>
@@ -13,10 +13,10 @@ const Track = (props) => {
 
 const Tracklist = (props) => {
   const {tracks,songs} = props;
-  console.log(tracks, songsByBasename(songs))
-  const _songsByBasename = songsByBasename(songs)
+  console.log(tracks, nodesByBasename(songs))
+  const songsByBasename = songsByBasename(songs)
   return <ol className='tracklist'>
-    {tracks.map((track) => <Track key={track} data={_songsByBasename[track]} />)}
+    {tracks.map((track) => <Track key={track} data={songsByBasename[track]} />)}
   </ol>
 }
 
