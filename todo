@@ -1,9 +1,4 @@
-(A) +1h Port events
-
-(A) +2h Port old homepage
 (A) +1h Disqus on Blog Posts & Song Show
-(A) +1h Songs Index Styling
-
 
 (A) Redirect /blog to /posts
 (A) Redirect /shows to /events
@@ -11,5 +6,7 @@
 (B) Rename blog to posts
 (B) Alias /blog to /posts
 
-(C) +3h Remove that bullshit theme
+(A) +1h Redo Signup
+(A) +1h Redo epk
+
 (C) Redo name to richsoni

@@ -15,7 +15,6 @@ export default class EventsTemplate extends React.Component {
   render() {
     const {event, locations} = this.props.data;
     const location = this.location();
-    console.log(location)
     return (
       <Content>
         <Breadcrumbs>
@@ -58,17 +57,18 @@ export default class EventsTemplate extends React.Component {
 
   setlist() {
     const {
-      show,
-      songs
-    } = this.props
+      event,
+      songs,
+    } = this.props.data;
+    const songsByBasename = nodesByBasename(songs)
     return <div>
       <h2>Setlist</h2>
       <ol>
         {
-          show.setlist.map((sl) => {
-            const song = songs.byID[sl]
+          event.frontmatter.setlist.map((sl) => {
+            const song = songsByBasename[sl]
             if(!song) { console.error(sl, " is not a song") }
-            return <li key={song.slug}><a href={song.url}>{song.title}</a></li>
+            return <li key={song.fields.basename}><a href={song.fields.url}>{song.frontmatter.title}</a></li>
           })
         }
       </ol>
@@ -82,12 +82,31 @@ export const query = graphql`
       html
       frontmatter {
         title
+        setlist
       }
       fields {
         date
         notdate
       }
     }
+
+    songs: allMarkdownRemark(
+      sort: { order: DESC, fields: [fields___date] }
+      filter: { fields: { relativeDirectory: {eq: "songs"}  }}
+      ) {
+        edges {
+          node {
+            id
+            frontmatter {
+              title
+            }
+            fields {
+              url
+              basename
+            }
+          }
+        }
+      }
 
     locations: allLocationsYaml {
       edges {

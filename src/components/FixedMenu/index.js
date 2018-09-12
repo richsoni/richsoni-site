@@ -12,8 +12,8 @@ const SocialButtons = socialButtons.map((sb) =>
 );
 
 const NavItems = navItems.map((ni) =>
-  <div className={hoverDim.hoverDim}>
-    <a key={ni.url} className={styles.navItem} href={ni.url}>{ni.title}</a>
+  <div key={ni.url} className={hoverDim.hoverDim}>
+    <a  className={styles.navItem} href={ni.url}>{ni.title}</a>
   </div>
 );
 

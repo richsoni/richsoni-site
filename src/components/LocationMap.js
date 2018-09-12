@@ -1,6 +1,5 @@
 import React from "react";
 export default (props) => {
-  console.log('x', props)
   const address = [
     props.name,
     props.address.address_1,
@@ -12,9 +11,9 @@ export default (props) => {
   return <iframe
   width="600"
   height="450"
-  frameborder="0"
+  frameBorder="0"
   style={{border:"0"}}
   src={`https://www.google.com/maps/embed/v1/place?key=${key}&q=${address}`}
-  allowfullscreen={true}>
+  allowFullScreen={true}>
   </iframe>
 }

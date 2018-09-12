@@ -10,6 +10,7 @@ export default (props) => {
     <Breadcrumbs>
       <Breadcrumb>Upcoming Events</Breadcrumb>
     </Breadcrumbs>
+    <i>Showing {props.upcomingEvents.length} events</i>
     <Table
        fields={[{
          title: 'Date',
@@ -37,6 +38,7 @@ export default (props) => {
     <Breadcrumbs>
       <Breadcrumb>Past Events</Breadcrumb>
     </Breadcrumbs>
+    <i>Showing {props.pastEvents.length} events</i>
     <Table
        fields={[{
          title: 'Date',

@@ -13,8 +13,7 @@ const Track = (props) => {
 
 const Tracklist = (props) => {
   const {tracks,songs} = props;
-  console.log(tracks, nodesByBasename(songs))
-  const songsByBasename = songsByBasename(songs)
+  const songsByBasename = nodesByBasename(songs)
   return <ol className='tracklist'>
     {tracks.map((track) => <Track key={track} data={songsByBasename[track]} />)}
   </ol>
