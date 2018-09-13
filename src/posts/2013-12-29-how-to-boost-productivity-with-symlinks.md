@@ -1,8 +1,8 @@
 ---
 layout: post
 categories: [Productivity, Coding, Technology]
-avatar: '/blog/images/typing_small.jpeg'
-hero:   '/blog/images/typing.jpg'
+avatar: '/images/posts/typing_small.jpeg'
+hero:   '/images/posts/typing.jpg'
 tags: [coding, productivity, command line, technology]
 blurb: 'We all could use a little extra time.  Any terminal user will benefit from this easy hack'
 title: 'How To Boost Productivity With Symbolic Links'

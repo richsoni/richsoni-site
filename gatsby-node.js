@@ -20,12 +20,20 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const {createPage, createRedirect } = boundActionCreators;
   createRedirect({
-    fromPath: 'shows/',
-    toPath: 'events/', isPermanent: true, redirectInBrowser: true
+    fromPath: '/blog/',
+    toPath: '/posts', isPermanent: true, redirectInBrowser: true
   });
   createRedirect({
-    fromPath: 'shows',
-    toPath: 'events/', isPermanent: true, redirectInBrowser: true
+    fromPath: '/blog',
+    toPath: '/posts', isPermanent: true, redirectInBrowser: true
+  });
+  createRedirect({
+    fromPath: '/shows/',
+    toPath: '/events', isPermanent: true, redirectInBrowser: true
+  });
+  createRedirect({
+    fromPath: '/shows',
+    toPath: '/events', isPermanent: true, redirectInBrowser: true
   });
   return new Promise((resolve, reject) => {
     graphql(`
@@ -49,6 +57,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         const template = path.resolve(`./src/templates/${type}.js`);
         if(existsSync(template))
         {
+          //Create Basic Blog Pages
           createPage({
             path: url,
             component: template,
@@ -63,11 +72,28 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
           });
           createRedirect({
             fromPath: url.replace(/\/$/, ''),
-            toPath: url, isPermanent: true
+            toPath: url, isPermanent: true,
+            redirectInBrowser: true
           });
-          createRedirect({
-            fromPath: url.replace(/\/shows\//, '\/events\/'),
-            toPath: url, isPermanent: true
+          // Redirects
+          [{from: 'blog', to: 'posts'}, {from: 'shows', to: 'events'}].map((item) =>{
+            const regexp = new RegExp(`\/${item.to}`);
+            if(url.match(regexp)){
+              const redirect = url.replace(regexp, `/${item.from}`);
+              createRedirect({
+                fromPath: redirect,
+                toPath: url, isPermanent: true, redirectInBrowser: true
+              });
+              createRedirect({
+                fromPath: redirect.replace(/\/$/, '')+'.html',
+                toPath: url, isPermanent: true,
+                redirectInBrowser: true, redirectInBrowser: true
+              });
+              createRedirect({
+                fromPath: redirect.replace(/\/$/, ''),
+                toPath: url, isPermanent: true, redirectInBrowser: true
+              });
+            }
           });
         }
       });

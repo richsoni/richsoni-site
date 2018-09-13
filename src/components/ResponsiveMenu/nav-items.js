@@ -1,6 +1,6 @@
 export default [{
-  url: '/blog',
-  title: 'Blog',
+  url: '/posts',
+  title: 'Posts',
 }, {
   url: '/albums',
   title: 'Albums',

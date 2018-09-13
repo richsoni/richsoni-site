@@ -14,7 +14,7 @@ export default ({ data }) => {
       <div className='post'>
         <div className='post-heading'>
           <Breadcrumbs>
-            <Breadcrumb href='/blog'>Posts</Breadcrumb>
+            <Breadcrumb href='/posts'>Posts</Breadcrumb>
             <Breadcrumb>{post.frontmatter.title}</Breadcrumb>
           </Breadcrumbs>
           <div style={{fontStyle: 'italic', marginBottom: '1em'}}>Posted {date}</div>
@@ -37,7 +37,7 @@ export default ({ data }) => {
 };
 
 export const query = graphql`
-  query BlogPostQuery($url: String!) {
+  query PostQuery($url: String!) {
     markdownRemark(fields: { url: { eq: $url } }) {
       html
       frontmatter {

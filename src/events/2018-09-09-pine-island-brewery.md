@@ -26,6 +26,14 @@ setlist:
   - devil-and-her-mother
   - ballad-of-the-condor
   - amelia
+  - sweet-grass-memory
+  - wayward-sister
+  - bearfort-tower
+  - atlantic-city
+  - spookytown
+  - leeds-devil
+  - black-velvet-band
+  - pine-of-the-pub
 
 ---
 
@@ -43,3 +51,10 @@ The next set: tomorrow-might-be-monday, workingmans-blues, benny-bet-his-wife-in
 I tried waiting-around-to-die a few times before, but I rearranged it during my rehearsals, and its sounding a lot better.
 
 It goes strong until mcalpines-fusiliers which is a weird rendition.
+
+Then I broke a string during Geeshie's Conjecture, and it took a few songs to get it back.
+sweet-grass-memory was interesting.
+
+bearfort-tower made its premiere.
+
+By this time my voice is shot, you can it in spookytown.

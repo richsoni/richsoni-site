@@ -3,8 +3,8 @@ layout: post
 date: 2016-01-19
 title: A Recipe For Arranging/Learning Impressive Cover Songs
 categories: [music diy songwriting guitar]
-avatar: /blog/images/cover-songs.png
-hero: /blog/images/cover-songs.png
+avatar: /images/posts/cover-songs.png
+hero: /images/posts/cover-songs.png
 tags: [music diy songwriting guitar]
 blurb: Great covers are classy
 revision: 10
