@@ -1,0 +1,2 @@
+webpackJsonp([0xc0593856e25b],{723:function(t,n){t.exports={data:{markdownRemark:{html:"",frontmatter:{title:"Workingman's Blues"},fields:{date:null}}},pathContext:{slug:"/songs/workingmans-blues/"}}}});
+//# sourceMappingURL=path---songs-workingmans-blues-a00ce081bdb4ffe2d592.js.map

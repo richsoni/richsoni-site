@@ -1,0 +1,2 @@
+webpackJsonp([58216365556136],{605:function(t,e){t.exports={data:{markdownRemark:{html:"",frontmatter:{title:"Dire Wolf"},fields:{date:null}}},pathContext:{slug:"/songs/dire-wolf/"}}}});
+//# sourceMappingURL=path---songs-dire-wolf-a284b404a85b6f505761.js.map

@@ -1,0 +1,2 @@
+webpackJsonp([0xba7c25b4ae15],{652:function(t,a){t.exports={data:{markdownRemark:{html:"",frontmatter:{title:"Lost"},fields:{date:null}}},pathContext:{slug:"/songs/lost/"}}}});
+//# sourceMappingURL=path---songs-lost-aaf6b41b24080943153e.js.map

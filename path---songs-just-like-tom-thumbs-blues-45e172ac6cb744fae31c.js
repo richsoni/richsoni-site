@@ -1,0 +1,2 @@
+webpackJsonp([0xad12a80f06dc],{644:function(t,e){t.exports={data:{markdownRemark:{html:"",frontmatter:{title:"Just Like Tom Thumbs Blues"},fields:{date:null}}},pathContext:{slug:"/songs/just-like-tom-thumbs-blues/"}}}});
+//# sourceMappingURL=path---songs-just-like-tom-thumbs-blues-45e172ac6cb744fae31c.js.map

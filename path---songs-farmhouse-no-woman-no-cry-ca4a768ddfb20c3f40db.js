@@ -1,0 +1,2 @@
+webpackJsonp([0xbfcc54c4b1ab],{613:function(o,a){o.exports={data:{markdownRemark:{html:"",frontmatter:{title:"Farmhouse / No Woman No Cry"},fields:{date:null}}},pathContext:{slug:"/songs/farmhouse-no-woman-no-cry/"}}}});
+//# sourceMappingURL=path---songs-farmhouse-no-woman-no-cry-ca4a768ddfb20c3f40db.js.map

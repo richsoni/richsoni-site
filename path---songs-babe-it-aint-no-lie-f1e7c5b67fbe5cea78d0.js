@@ -1,0 +1,2 @@
+webpackJsonp([0x6dee35d373f7],{584:function(t,e){t.exports={data:{markdownRemark:{html:"",frontmatter:{title:"Babe It Ain't No Lie"},fields:{date:null}}},pathContext:{slug:"/songs/babe-it-aint-no-lie/"}}}});
+//# sourceMappingURL=path---songs-babe-it-aint-no-lie-f1e7c5b67fbe5cea78d0.js.map

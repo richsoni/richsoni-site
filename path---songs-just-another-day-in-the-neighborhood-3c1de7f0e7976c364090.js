@@ -1,0 +1,2 @@
+webpackJsonp([0xcd85405ca4de],{643:function(t,e){t.exports={data:{markdownRemark:{html:"",frontmatter:{title:"Just Another Day In The Neighborhood"},fields:{date:null}}},pathContext:{slug:"/songs/just-another-day-in-the-neighborhood/"}}}});
+//# sourceMappingURL=path---songs-just-another-day-in-the-neighborhood-3c1de7f0e7976c364090.js.map

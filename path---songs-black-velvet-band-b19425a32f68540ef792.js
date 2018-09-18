@@ -1,0 +1,2 @@
+webpackJsonp([48519286527801],{590:function(t,a){t.exports={data:{markdownRemark:{html:"",frontmatter:{title:"Black Velvet Band"},fields:{date:null}}},pathContext:{slug:"/songs/black-velvet-band/"}}}});
+//# sourceMappingURL=path---songs-black-velvet-band-b19425a32f68540ef792.js.map

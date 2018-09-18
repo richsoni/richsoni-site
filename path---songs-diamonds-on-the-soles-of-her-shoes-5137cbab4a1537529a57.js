@@ -1,0 +1,2 @@
+webpackJsonp([0x694db21ef76c],{602:function(e,o){e.exports={data:{markdownRemark:{html:"",frontmatter:{title:"Diamonds On The Souls Of Her Shoes"},fields:{date:null}}},pathContext:{slug:"/songs/diamonds-on-the-soles-of-her-shoes/"}}}});
+//# sourceMappingURL=path---songs-diamonds-on-the-soles-of-her-shoes-5137cbab4a1537529a57.js.map

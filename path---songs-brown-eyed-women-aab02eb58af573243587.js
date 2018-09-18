@@ -1,0 +1,2 @@
+webpackJsonp([54456747589684],{596:function(e,t){e.exports={data:{markdownRemark:{html:"",frontmatter:{title:"Brown Eyed Women"},fields:{date:null}}},pathContext:{slug:"/songs/brown-eyed-women/"}}}});
+//# sourceMappingURL=path---songs-brown-eyed-women-aab02eb58af573243587.js.map

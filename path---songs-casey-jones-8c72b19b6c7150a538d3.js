@@ -1,0 +1,2 @@
+webpackJsonp([0x7ad87a3542c0],{597:function(t,a){t.exports={data:{markdownRemark:{html:"",frontmatter:{title:"Casey Jones"},fields:{date:null}}},pathContext:{slug:"/songs/casey-jones/"}}}});
+//# sourceMappingURL=path---songs-casey-jones-8c72b19b6c7150a538d3.js.map

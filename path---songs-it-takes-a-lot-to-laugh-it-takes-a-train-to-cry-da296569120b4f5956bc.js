@@ -1,0 +1,2 @@
+webpackJsonp([94187157870743],{639:function(t,a){t.exports={data:{markdownRemark:{html:"",frontmatter:{title:"It Takes A Lot To Laugh (It Takes A Train To Cry)"},fields:{date:null}}},pathContext:{slug:"/songs/it-takes-a-lot-to-laugh-it-takes-a-train-to-cry/"}}}});
+//# sourceMappingURL=path---songs-it-takes-a-lot-to-laugh-it-takes-a-train-to-cry-da296569120b4f5956bc.js.map

@@ -1,0 +1,2 @@
+webpackJsonp([0xfad947787400],{653:function(t,n){t.exports={data:{markdownRemark:{html:"",frontmatter:{title:"Lucky Old Sun"},fields:{date:null}}},pathContext:{slug:"/songs/lucky-old-sun/"}}}});
+//# sourceMappingURL=path---songs-lucky-old-sun-67ad4c55db40e17386b5.js.map
