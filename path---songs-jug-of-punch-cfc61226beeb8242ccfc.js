@@ -1,0 +1,2 @@
+webpackJsonp([78680923586498],{641:function(t,n){t.exports={data:{markdownRemark:{html:"",frontmatter:{title:"Jug of Punch"},fields:{date:null}}},pathContext:{slug:"/songs/jug-of-punch/"}}}});
+//# sourceMappingURL=path---songs-jug-of-punch-cfc61226beeb8242ccfc.js.map
