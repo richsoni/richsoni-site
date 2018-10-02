@@ -1,2 +1,0 @@
-webpackJsonp([0x6cbfb54328ab],{676:function(n,a){n.exports={data:{markdownRemark:{html:"",frontmatter:{title:"Romance In Durango"},fields:{date:null}}},pathContext:{slug:"/songs/romance-in-durango/"}}}});
-//# sourceMappingURL=path---songs-romance-in-durango-004cfc9da8bce2c89a67.js.map

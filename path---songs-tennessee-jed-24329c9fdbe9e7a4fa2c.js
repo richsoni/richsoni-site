@@ -1,2 +1,0 @@
-webpackJsonp([0xc781fdce9bd2],{697:function(e,t){e.exports={data:{markdownRemark:{html:"",frontmatter:{title:"Tennessee Jed"},fields:{date:null}}},pathContext:{slug:"/songs/tennessee-jed/"}}}});
-//# sourceMappingURL=path---songs-tennessee-jed-24329c9fdbe9e7a4fa2c.js.map

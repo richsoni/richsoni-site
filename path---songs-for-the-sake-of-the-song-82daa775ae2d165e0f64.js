@@ -1,2 +1,0 @@
-webpackJsonp([0xc5e3abdb5218],{616:function(e,t){e.exports={data:{markdownRemark:{html:"",frontmatter:{title:"For The Sake Of The Song"},fields:{date:null}}},pathContext:{slug:"/songs/for-the-sake-of-the-song/"}}}});
-//# sourceMappingURL=path---songs-for-the-sake-of-the-song-82daa775ae2d165e0f64.js.map

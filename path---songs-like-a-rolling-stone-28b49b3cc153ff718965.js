@@ -1,2 +1,0 @@
-webpackJsonp([0x9435921dcd0b],{648:function(t,e){t.exports={data:{markdownRemark:{html:"",frontmatter:{title:"Like A Rolling Stone"},fields:{date:null}}},pathContext:{slug:"/songs/like-a-rolling-stone/"}}}});
-//# sourceMappingURL=path---songs-like-a-rolling-stone-28b49b3cc153ff718965.js.map

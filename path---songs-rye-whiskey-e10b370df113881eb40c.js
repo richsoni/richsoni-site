@@ -1,2 +1,0 @@
-webpackJsonp([0xf09a386bedd4],{678:function(e,t){e.exports={data:{markdownRemark:{html:"",frontmatter:{title:"Rye Whiskey"},fields:{date:null}}},pathContext:{slug:"/songs/rye-whiskey/"}}}});
-//# sourceMappingURL=path---songs-rye-whiskey-e10b370df113881eb40c.js.map

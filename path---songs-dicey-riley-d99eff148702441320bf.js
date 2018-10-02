@@ -1,2 +1,0 @@
-webpackJsonp([94267868800545],{603:function(t,e){t.exports={data:{markdownRemark:{html:"",frontmatter:{title:"Dicey Riley"},fields:{date:null}}},pathContext:{slug:"/songs/dicey-riley/"}}}});
-//# sourceMappingURL=path---songs-dicey-riley-d99eff148702441320bf.js.map

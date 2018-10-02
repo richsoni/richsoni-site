@@ -1,2 +1,0 @@
-webpackJsonp([0x67af247663b9],{645:function(t,a){t.exports={data:{markdownRemark:{html:"",frontmatter:{title:"King Of The Road"},fields:{date:null}}},pathContext:{slug:"/songs/king-of-the-road/"}}}});
-//# sourceMappingURL=path---songs-king-of-the-road-e35781090a65a77fa489.js.map

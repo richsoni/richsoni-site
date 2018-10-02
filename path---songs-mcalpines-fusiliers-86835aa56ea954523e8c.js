@@ -1,2 +1,0 @@
-webpackJsonp([0xaa645729bc8d],{655:function(t,e){t.exports={data:{markdownRemark:{html:"",frontmatter:{title:"McAlpines Fusiliers"},fields:{date:null}}},pathContext:{slug:"/songs/mcalpines-fusiliers/"}}}});
-//# sourceMappingURL=path---songs-mcalpines-fusiliers-86835aa56ea954523e8c.js.map

@@ -1,2 +1,0 @@
-webpackJsonp([0xf59875d57be8],{702:function(t,e){t.exports={data:{markdownRemark:{html:"",frontmatter:{title:"The Weight"},fields:{date:null}}},pathContext:{slug:"/songs/the-weight/"}}}});
-//# sourceMappingURL=path---songs-the-weight-58c34728b8faa583f6f5.js.map

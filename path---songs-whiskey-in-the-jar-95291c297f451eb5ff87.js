@@ -1,2 +1,0 @@
-webpackJsonp([0x754e16030818],{718:function(t,e){t.exports={data:{markdownRemark:{html:"",frontmatter:{title:"Whiskey In The Jar"},fields:{date:null}}},pathContext:{slug:"/songs/whiskey-in-the-jar/"}}}});
-//# sourceMappingURL=path---songs-whiskey-in-the-jar-95291c297f451eb5ff87.js.map

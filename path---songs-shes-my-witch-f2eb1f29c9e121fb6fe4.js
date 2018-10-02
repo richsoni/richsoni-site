@@ -1,2 +1,0 @@
-webpackJsonp([44328836681186],{682:function(t,e){t.exports={data:{markdownRemark:{html:"",frontmatter:{title:"She's My Witch"},fields:{date:null}}},pathContext:{slug:"/songs/shes-my-witch/"}}}});
-//# sourceMappingURL=path---songs-shes-my-witch-f2eb1f29c9e121fb6fe4.js.map

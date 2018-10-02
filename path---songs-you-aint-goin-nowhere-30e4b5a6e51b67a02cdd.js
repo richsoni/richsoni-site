@@ -1,2 +1,0 @@
-webpackJsonp([59586091544996],{724:function(t,n){t.exports={data:{markdownRemark:{html:"",frontmatter:{title:"You Ain't Goin' Nowhere"},fields:{date:null}}},pathContext:{slug:"/songs/you-aint-goin-nowhere/"}}}});
-//# sourceMappingURL=path---songs-you-aint-goin-nowhere-30e4b5a6e51b67a02cdd.js.map

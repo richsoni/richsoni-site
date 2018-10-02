@@ -1,2 +1,0 @@
-webpackJsonp([0x87a133780a20],{677:function(t,a){t.exports={data:{markdownRemark:{html:"",frontmatter:{title:"Rosin The Beau"},fields:{date:null}}},pathContext:{slug:"/songs/rosin-the-beau/"}}}});
-//# sourceMappingURL=path---songs-rosin-the-beau-eac015b12b08330a0602.js.map

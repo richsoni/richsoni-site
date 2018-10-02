@@ -1,2 +1,0 @@
-webpackJsonp([0xae414b439a70],{703:function(t,e){t.exports={data:{markdownRemark:{html:"",frontmatter:{title:"The Wild Rover"},fields:{date:null}}},pathContext:{slug:"/songs/the-wild-rover/"}}}});
-//# sourceMappingURL=path---songs-the-wild-rover-3b1d2d02b38fb228bd63.js.map

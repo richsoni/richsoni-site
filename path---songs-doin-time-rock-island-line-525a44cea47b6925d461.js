@@ -1,2 +1,0 @@
-webpackJsonp([44622251860928],{606:function(n,t){n.exports={data:{markdownRemark:{html:"",frontmatter:{title:"Doin' Time / Rock Island Line"},fields:{date:null}}},pathContext:{slug:"/songs/doin-time-rock-island-line/"}}}});
-//# sourceMappingURL=path---songs-doin-time-rock-island-line-525a44cea47b6925d461.js.map

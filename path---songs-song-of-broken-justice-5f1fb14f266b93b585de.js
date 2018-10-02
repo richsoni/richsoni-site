@@ -1,2 +1,0 @@
-webpackJsonp([28018682460801],{687:function(t,e){t.exports={data:{markdownRemark:{html:"",frontmatter:{title:"Song Of Broken Justice"},fields:{date:null}}},pathContext:{slug:"/songs/song-of-broken-justice/"}}}});
-//# sourceMappingURL=path---songs-song-of-broken-justice-5f1fb14f266b93b585de.js.map

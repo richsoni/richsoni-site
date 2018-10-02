@@ -1,2 +1,0 @@
-webpackJsonp([0x9eecffdbf784],{609:function(t,o){t.exports={data:{markdownRemark:{html:"",frontmatter:{title:"Down In The Bottom"},fields:{date:null}}},pathContext:{slug:"/songs/down-in-the-bottom/"}}}});
-//# sourceMappingURL=path---songs-down-in-the-bottom-9e08c007851df829d04d.js.map

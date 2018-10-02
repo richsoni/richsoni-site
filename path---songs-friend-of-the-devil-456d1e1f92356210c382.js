@@ -1,2 +1,0 @@
-webpackJsonp([0x5c84293115b2],{620:function(e,t){e.exports={data:{markdownRemark:{html:"",frontmatter:{title:"Friend Of The Devil"},fields:{date:null}}},pathContext:{slug:"/songs/friend-of-the-devil/"}}}});
-//# sourceMappingURL=path---songs-friend-of-the-devil-456d1e1f92356210c382.js.map
