@@ -1,0 +1,1 @@
+{"data":{"markdownRemark":{"html":"<pre><code>src/components/Footer/index.ts(8,5): error TS1005: '>' expecte\n</code></pre>\n<p>Needs to be JSX</p>","frontmatter":{"title":"Naive Typescript Conversion on RichSoni.com: Pass 3","hero":"/images/posts/gatsby-logo.jpg"},"fields":{"date":"2019-01-03"}}},"pageContext":{"url":"/posts/2019-01-03-naive-typescript-conversion-pass-3/"}}
